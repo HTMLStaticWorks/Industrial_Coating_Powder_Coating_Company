@@ -1,0 +1,345 @@
+/* assets/css/pages/materials.css */
+
+/* --- SECTION 01 - MATERIAL HERO --- */
+.materials-hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 5rem;
+    overflow: hidden;
+}
+
+.materials-hero-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('../../images/materials_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.materials-hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.6) 100%);
+    z-index: 2;
+}
+
+.materials-hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.materials-hero-content h1 {
+    color: #fff;
+    margin-bottom: var(--space-md);
+}
+
+.materials-hero-content p {
+    color: #f0f0f0;
+}
+
+.materials-list-hero {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.materials-list-hero span {
+    color: var(--accent-orange);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.materials-list-hero span::before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-orange);
+}
+
+@media (max-width: 768px) {
+    .materials-list-hero { flex-direction: column; gap: 0.5rem; }
+}
+
+/* --- SECTION 02 - MATERIAL SELECTOR --- */
+.selector-section {
+    background-color: var(--bg-primary);
+}
+
+.selector-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.selector-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.selector-btn {
+    padding: 1.5rem;
+    text-align: left;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+}
+
+[dir="rtl"] .selector-btn { text-align: right; }
+
+.selector-btn::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; width: 4px; height: 100%;
+    background-color: transparent;
+    transition: background-color var(--transition-fast);
+}
+
+[dir="rtl"] .selector-btn::before { left: auto; right: 0; }
+
+.selector-btn:hover {
+    border-color: var(--accent-orange);
+}
+
+.selector-btn.active {
+    background: var(--industrial-black);
+    color: #fff;
+    border-color: var(--industrial-black);
+}
+
+.selector-btn.active::before {
+    background-color: var(--accent-orange);
+}
+
+.selector-content-area {
+    background: var(--bg-card);
+    padding: 3rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.selector-panel {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.selector-panel.active {
+    display: block;
+}
+
+.considerations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.consideration-box {
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: var(--radius-sm);
+    border-left: 2px solid var(--text-muted);
+}
+
+[dir="rtl"] .consideration-box { border-left: none; border-right: 2px solid var(--text-muted); }
+
+.consideration-box h4 {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+@media (max-width: 900px) {
+    .selector-container { grid-template-columns: 1fr; gap: 2rem; }
+    .selector-nav { flex-direction: row; overflow-x: auto; scrollbar-width: none; }
+    .selector-btn { padding: 1rem; flex: 0 0 auto; white-space: nowrap; }
+    .selector-btn::before { width: 100%; height: 4px; top: auto; bottom: 0; left: 0; }
+    [dir="rtl"] .selector-btn::before { left: 0; }
+    .considerations-grid { grid-template-columns: 1fr; }
+}
+
+/* --- SECTION 03 - COLOR & FINISH LAB --- */
+.lab-section {
+    background-color: var(--industrial-black);
+    color: #fff;
+    padding: 6rem 0;
+}
+
+.lab-section h2, .lab-section p { color: #fff; }
+.lab-section .label-small { margin-bottom: 1rem; }
+
+.lab-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.lab-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.lab-category h4 {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #999;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 0.5rem;
+}
+
+.color-palette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.palette-swatch {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
+    position: relative;
+}
+
+.palette-swatch:hover, .palette-swatch.active {
+    transform: scale(1.1);
+    border-color: #fff;
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+.finish-types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.finish-btn {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+.finish-btn:hover, .finish-btn.active {
+    background: var(--accent-orange);
+    border-color: var(--accent-orange);
+}
+
+/* Visualization Display */
+.lab-display {
+    position: relative;
+    background: #fff;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lab-base-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.lab-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    mix-blend-mode: multiply;
+    background-color: #FF5A00;
+    transition: background-color 0.5s ease;
+}
+
+.lab-texture {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)" opacity="0.15"/></svg>');
+    mix-blend-mode: overlay;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.lab-metallic {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(45deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 70%);
+    mix-blend-mode: overlay;
+    opacity: 0;
+    transition: opacity 0.5s ease, background-position 2s linear;
+    pointer-events: none;
+    background-size: 200% 200%;
+    animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% -200%; }
+    100% { background-position: 200% 200%; }
+}
+
+@media (max-width: 900px) {
+    .lab-grid { grid-template-columns: 1fr; }
+    .lab-display { height: 400px; }
+}
+
+@media (max-width: 768px) {
+    .color-palette {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 0.5rem;
+        scrollbar-width: none;
+        padding-bottom: 0.5rem;
+    }
+    .color-palette::-webkit-scrollbar { 
+        display: none; 
+    }
+    .finish-types {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .finish-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* --- SECTION 04 - COLOR CTA --- */
+.color-cta {
+    background-color: var(--bg-secondary);
+    text-align: center;
+    padding: 6rem 0;
+}

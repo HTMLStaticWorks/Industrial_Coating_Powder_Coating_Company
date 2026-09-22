@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colors - Light Theme (Default) */
+  --bg-primary: #FAFAFA;
+  --bg-secondary: #F0F0F0;
+  --bg-card: #FFFFFF;
+  --bg-footer: #FFFFFF;
+  
+  --text-primary: #1A1A1A; /* Graphite */
+  --text-secondary: #4A4A4A;
+  --text-muted: #757575;
+  
+  --border-color: #E0E0E0;
+  --border-light: #EEEEEE;
+
+  /* Accent - Industrial Orange */
+  --accent-orange: #FF5A00; /* Safety Orange */
+  --accent-orange-hover: #E04F00;
+  --accent-orange-light: rgba(255, 90, 0, 0.1);
+
+  /* Specific Industrial Neutrals */
+  --industrial-black: #0A0A0A;
+  --charcoal: #1C1C1C;
+  --gunmetal: #2C3539;
+  --concrete: #D3D3D3;
+
+  /* Typography */
+  --font-heading: 'Space Grotesk', 'Sora', sans-serif;
+  --font-body: 'Inter', 'Manrope', sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 5rem;
+  --section-pad: 5rem 0;
+
+  /* Borders / Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.08);
+  --shadow-lg: 0 10px 20px rgba(0,0,0,0.1);
+  --shadow-glow: 0 0 15px rgba(255, 90, 0, 0.3);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-slow: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+[data-theme="dark"] {
+  /* Colors - Dark Theme */
+  --bg-primary: #0A0A0A;
+  --bg-secondary: #121212;
+  --bg-card: #1A1A1A;
+  --bg-footer: #050505;
+  
+  --text-primary: #FFFFFF;
+  --text-secondary: #B0B0B0;
+  --text-muted: #666666;
+  
+  --border-color: #333333;
+  --border-light: #222222;
+
+  --accent-orange: #FF6600; 
+  --accent-orange-hover: #FF8533;
+  
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.3);
+  --shadow-lg: 0 10px 20px rgba(0,0,0,0.4);
+}

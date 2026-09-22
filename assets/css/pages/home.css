@@ -1,0 +1,505 @@
+/* assets/css/pages/home.css */
+
+/* --- SECTION 01 - HERO --- */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 5rem;
+    overflow: hidden;
+    background-color: var(--industrial-black);
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../images/home_hero_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: 1;
+    transition: transform 10s linear;
+}
+
+.hero-section:hover .hero-bg {
+    transform: scale(1.05);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.4) 100%);
+    z-index: 2;
+}
+
+[dir="rtl"] .hero-overlay {
+    background: linear-gradient(to left, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.4) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+}
+
+.hero-content h1, .hero-content p, .hero-content .label-small {
+    color: #fff;
+}
+
+.hero-content h1 {
+    margin-bottom: var(--space-md);
+    text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    color: #D3D3D3;
+    margin-bottom: var(--space-lg);
+    max-width: 600px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* 3D Hero Object */
+.hero-3d-object {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%) perspective(1000px) rotateY(-15deg);
+    width: 400px;
+    height: 400px;
+    z-index: 3;
+    border: 2px dashed var(--accent-orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotate3d 20s linear infinite;
+}
+
+[dir="rtl"] .hero-3d-object {
+    right: auto;
+    left: 5%;
+    transform: translateY(-50%) perspective(1000px) rotateY(15deg);
+}
+
+.hero-3d-object::before {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    border: 4px solid rgba(255, 90, 0, 0.5);
+    border-radius: 50%;
+    animation: rotate3dReverse 15s linear infinite;
+}
+
+@keyframes rotate3d {
+    0% { transform: translateY(-50%) perspective(1000px) rotateX(0) rotateY(0) rotateZ(0); }
+    100% { transform: translateY(-50%) perspective(1000px) rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}
+@keyframes rotate3dReverse {
+    0% { transform: rotateX(0) rotateY(0) rotateZ(0); }
+    100% { transform: rotateX(-360deg) rotateY(-360deg) rotateZ(-360deg); }
+}
+
+@media (max-width: 1024px) {
+    .hero-3d-object { 
+        display: flex;
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none !important;
+        margin: 3rem auto 0;
+        width: 300px;
+        height: 300px;
+        animation: none;
+    }
+    [dir="rtl"] .hero-3d-object {
+        transform: none !important;
+        left: auto;
+        right: auto;
+    }
+    .hero-content { text-align: center; margin: 0 auto; }
+    .hero-overlay { background: rgba(10, 10, 10, 0.7); }
+    .hero-actions { justify-content: center; }
+}
+
+@media (max-width: 768px) {
+    .hero-actions {
+        flex-direction: column;
+    }
+    .hero-actions .btn {
+        white-space: nowrap;
+        font-size: 0.85rem;
+        padding: 0.75rem 1rem;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* --- SECTION 02 - CAPABILITY MATRIX --- */
+.capability-section {
+    background-color: var(--bg-secondary);
+}
+
+.matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .matrix-grid { grid-template-columns: 1fr; }
+}
+
+.matrix-item {
+    background: var(--bg-card);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.matrix-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-orange);
+}
+
+.matrix-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.matrix-item h3::after {
+    content: '+';
+    color: var(--accent-orange);
+    font-weight: 300;
+}
+
+.progress-group {
+    margin-top: 1.5rem;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--accent-orange);
+    width: 0;
+    transition: width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.matrix-item:hover .progress-fill {
+    box-shadow: var(--shadow-glow);
+}
+
+/* --- SECTION 03 - PROCESS TIMELINE --- */
+.process-section {
+    overflow: hidden;
+}
+
+.timeline-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 4rem;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--border-color);
+    z-index: 1;
+}
+
+.timeline-line-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--accent-orange);
+    width: 0; /* Will animate */
+    transition: width 2s ease;
+}
+
+.timeline-step {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 14%;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background-color: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin: 0 auto 1.5rem auto;
+    transition: all var(--transition-normal);
+}
+
+.timeline-step:hover .step-number {
+    border-color: var(--accent-orange);
+    color: var(--accent-orange);
+    transform: scale(1.1);
+    box-shadow: var(--shadow-glow);
+}
+
+.step-title {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+@media (max-width: 900px) {
+    .timeline-container {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+    
+    [dir="rtl"] .timeline-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .timeline-line {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100%;
+    }
+    
+    [dir="rtl"] .timeline-line {
+        left: 50%;
+        right: auto;
+    }
+    
+    .timeline-line-active {
+        width: 100%;
+        height: 0;
+        transition: height 2s ease;
+    }
+    
+    .timeline-step {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+    
+    [dir="rtl"] .timeline-step {
+        text-align: center;
+    }
+    
+    .step-number {
+        margin: 0 auto 1rem auto;
+        background-color: var(--bg-card);
+        z-index: 2;
+        position: relative;
+    }
+    
+    [dir="rtl"] .step-number {
+        margin: 0 auto 1rem auto;
+    }
+}
+
+/* --- SECTION 04 - MATERIAL INTELLIGENCE --- */
+.material-section {
+    padding: var(--section-pad) 0;
+    background-color: var(--bg-primary);
+}
+
+.material-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.material-image-wrapper {
+    width: 50%;
+}
+
+.card-image-container {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.material-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    display: block;
+    object-fit: cover;
+}
+
+.material-content {
+    width: 50%;
+    padding: 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.material-content-inner {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.material-list {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.material-item {
+    border-left: 2px solid var(--accent-orange);
+    padding-left: 1rem;
+}
+
+[dir="rtl"] .material-item {
+    border-left: none;
+    border-right: 2px solid var(--accent-orange);
+    padding-left: 0;
+    padding-right: 1rem;
+}
+
+.material-item h4 {
+    margin-bottom: 0.25rem;
+}
+
+.material-item p {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+    .material-container {
+        flex-direction: column;
+    }
+    .material-image-wrapper, .material-content {
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .material-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- SECTION 05 - PERFORMANCE NUMBERS --- */
+.performance-section {
+    background-color: var(--charcoal);
+    color: #fff;
+    text-align: center;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stat-item {
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-md);
+    background: rgba(255,255,255,0.02);
+}
+
+.stat-number {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight: 700;
+    color: var(--accent-orange);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.stat-item h4 {
+    color: #fff;
+    margin-bottom: 0;
+    font-size: 1.125rem;
+}
+
+@media (max-width: 1024px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .stats-grid { grid-template-columns: 1fr; }
+}
+
+/* --- SECTION 06 - FINAL CTA --- */
+.cta-section {
+    position: relative;
+    padding: 8rem 0;
+    text-align: center;
+    background-color: var(--accent-orange);
+    color: #fff;
+    overflow: hidden;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2, .cta-content p {
+    color: #fff;
+}

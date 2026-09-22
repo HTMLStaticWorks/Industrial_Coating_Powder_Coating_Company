@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TitanCoat | Pricing Solutions</title>
+    
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages/pricing.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M50 10 L85 25 L85 60 C85 80 50 95 50 95 C50 95 15 80 15 60 L15 25 L50 10 Z" stroke="var(--accent-orange)" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M50 25 L70 35 L70 55 C70 70 50 80 50 80 C50 80 30 70 30 55 L30 35 L50 25 Z" fill="var(--accent-orange)"/>
+    <path d="M35 55 L65 55" stroke="var(--bg-card)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M50 35 L50 70" stroke="var(--bg-card)" stroke-width="3" stroke-linecap="round"/>
+</svg>
+TITANCOAT
+            </a>
+
+            <div class="nav-menu">
+                <div class="nav-item-dropdown"> <a href="#" class="nav-link">Home <svg style="width:16px;height:16px;vertical-align:middle;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a> <div class="dropdown-menu"> <a href="index.html" class="dropdown-link">Home 1</a> <a href="home-2.html" class="dropdown-link">Home 2</a> </div> </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="pricing.html" class="nav-link active">Pricing</a>
+                <a href="materials-colors.html" class="nav-link">Materials</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Theme"></button>
+                <button class="rtl-toggle" id="rtl-toggle" title="Toggle RTL" style="display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 4l4 4-4 4"></path><path d="M21 8H3"></path><path d="M7 20l-4-4 4-4"></path><path d="M3 16h18"></path></svg></button>
+                <a href="#" class="btn btn-primary" data-modal-target="quote-modal">REQUEST A QUOTE</a>
+            </div>
+
+            <button class="hamburger"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+        <div class="mobile-nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="home-2.html" class="nav-link">Home 2</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="pricing.html" class="nav-link active">Pricing</a>
+            <a href="materials-colors.html" class="nav-link">Materials & Colors</a>
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        <div class="mobile-top-controls">
+            <button class="theme-toggle">Theme</button>
+            <button class="rtl-toggle" id="rtl-toggle" title="Toggle RTL" style="display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 4l4 4-4 4"></path><path d="M21 8H3"></path><path d="M7 20l-4-4 4-4"></path><path d="M3 16h18"></path></svg></button>
+        </div>
+        <a href="#" class="btn btn-primary" data-modal-target="quote-modal" style="width: 100%; text-align: center;">REQUEST A QUOTE</a>
+    </div>
+
+    <!-- SECTION 01: PRICING HERO -->
+    <section class="pricing-hero">
+        <div class="pricing-hero-bg"></div>
+        <div class="pricing-hero-overlay"></div>
+        <div class="container relative">
+            <div class="pricing-hero-content fade-up">
+                <span class="label-small">Coating Solutions</span>
+                <h1>A Coating Solution Built Around the Job.</h1>
+                <p class="text-lead" style="color: #D3D3D3;">Industrial coating pricing is engineered based on specific application variables. We provide transparent estimates based on exact requirements.</p>
+                <div class="pricing-factors-list">
+                    <span class="factor-badge">Material Base</span>
+                    <span class="factor-badge">Dimensions</span>
+                    <span class="factor-badge">Surface Condition</span>
+                    <span class="factor-badge">Preparation Needs</span>
+                    <span class="factor-badge">Coating System</span>
+                    <span class="factor-badge">Batch Quantity</span>
+                </div>
+                <button class="btn btn-primary" style="margin-top: 2rem;" data-modal-target="quote-modal">Request Project Pricing</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 01B: PRICING PROCESS CARDS -->
+    <section class="pricing-cards-section">
+        <div class="container">
+            <div class="fade-up text-center">
+                <span class="label-small">Pricing Model</span>
+                <h2>How We Calculate Costs</h2>
+                <p style="max-width: 600px; margin: 0 auto;">Our quotation process is designed to be fully transparent, analyzing every variable to deliver accurate project pricing.</p>
+            </div>
+            <div class="pricing-cards-grid">
+                <div class="pricing-card fade-up">
+                    <img src="assets/images/Engineering%20Review.png" alt="Engineering Review" class="pricing-card-img">
+                    <h3>1. Engineering Review</h3>
+                    <p>Initial evaluation of technical drawings, material specifications, and environmental demands.</p>
+                </div>
+                <div class="pricing-card fade-up" style="transition-delay: 0.1s;">
+                    <img src="assets/images/Process%20Formulation.png" alt="Process Formulation" class="pricing-card-img">
+                    <h3>2. Process Formulation</h3>
+                    <p>Determining the optimal pre-treatment chemistry and coating layers to meet specifications.</p>
+                </div>
+                <div class="pricing-card fade-up" style="transition-delay: 0.2s;">
+                    <img src="assets/images/Cost%20Optimization.png" alt="Cost Optimization" class="pricing-card-img">
+                    <h3>3. Cost Optimization</h3>
+                    <p>Leveraging automated line efficiencies and batch processing to lower overall unit costs.</p>
+                </div>
+                <div class="pricing-card fade-up" style="transition-delay: 0.3s;">
+                    <img src="assets/images/Formal%20Quotation.png" alt="Formal Quotation" class="pricing-card-img">
+                    <h3>4. Formal Quotation</h3>
+                    <p>Providing a comprehensive, transparent line-item estimate for project scheduling and approval.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 02: SOLUTION TIERS -->
+    <section class="tiers-section">
+        <div class="container">
+            <div class="fade-up text-center">
+                <span class="label-small">System Tiers</span>
+                <h2>Industrial Solution Levels</h2>
+                <p style="max-width: 600px; margin: 0 auto;">Select the baseline specification that best matches your environmental and operational demands.</p>
+            </div>
+            
+            <div class="tiers-grid">
+                <!-- Standard -->
+                <div class="tier-card fade-up">
+                    <div class="tier-header">
+                        <h3>Standard</h3>
+                        <p>General-purpose finishing.</p>
+                    </div>
+                    <ul class="tier-features">
+                        <li>Basic degreasing</li>
+                        <li>Single-layer powder coat</li>
+                        <li>Standard color range</li>
+                        <li>Indoor application suitability</li>
+                        <li>Standard curing cycle</li>
+                    </ul>
+                    <button class="btn btn-outline" data-modal-target="quote-modal" style="width:100%;">Request Specification</button>
+                </div>
+
+                <!-- Performance -->
+                <div class="tier-card featured fade-up" style="transition-delay: 0.1s;">
+                    <div class="tier-badge">Recommended</div>
+                    <div class="tier-header">
+                        <h3>Performance</h3>
+                        <p>For demanding industrial use.</p>
+                    </div>
+                    <ul class="tier-features">
+                        <li>Abrasive mechanical prep</li>
+                        <li>Zinc-rich epoxy primer layer</li>
+                        <li>Super-durable polyester topcoat</li>
+                        <li>Outdoor UV resistance</li>
+                        <li>Extended warranty</li>
+                    </ul>
+                    <button class="btn btn-primary" data-modal-target="quote-modal" style="width:100%;">Request Specification</button>
+                </div>
+
+                <!-- Protective -->
+                <div class="tier-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="tier-header">
+                        <h3>Protective</h3>
+                        <p>Harsh environmental defense.</p>
+                    </div>
+                    <ul class="tier-features">
+                        <li>White metal sandblast (SP-5)</li>
+                        <li>Multi-layer barrier coating</li>
+                        <li>Extreme chemical resistance</li>
+                        <li>Marine-grade suitability</li>
+                        <li>Independent lab verification</li>
+                    </ul>
+                    <button class="btn btn-outline" data-modal-target="quote-modal" style="width:100%;">Request Specification</button>
+                </div>
+
+                <!-- Custom -->
+                <div class="tier-card fade-up" style="transition-delay: 0.3s;">
+                    <div class="tier-header">
+                        <h3>Custom</h3>
+                        <p>Engineered around the application.</p>
+                    </div>
+                    <ul class="tier-features">
+                        <li>Engineered pre-treatment</li>
+                        <li>Specialized alloy consideration</li>
+                        <li>Custom color formulation</li>
+                        <li>Specific texture profiling</li>
+                        <li>Dedicated QA planning</li>
+                    </ul>
+                    <button class="btn btn-outline" data-modal-target="quote-modal" style="width:100%;">Discuss Application</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 03: COST FACTORS (CALCULATOR) -->
+    <section class="calculator-section">
+        <div class="container">
+            <div class="calculator-container fade-up">
+                <div class="calc-grid">
+                    <div>
+                        <span class="label-small">Estimation Tool</span>
+                        <h2 style="margin-bottom: 2rem;">Cost Factor Calculator</h2>
+                        <form class="calc-form" id="pricing-calculator">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-label">Material Category</label>
+                                    <select class="form-control" id="calc-material">
+                                        <option value="1">Standard Steel</option>
+                                        <option value="1.2">Aluminum</option>
+                                        <option value="1.5">Stainless Steel</option>
+                                        <option value="1.8">Cast Iron</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Coating System</label>
+                                    <select class="form-control" id="calc-system">
+                                        <option value="50">Standard (Single Coat)</option>
+                                        <option value="120">Performance (Primer + Topcoat)</option>
+                                        <option value="200">Protective (Multi-layer)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-label">Surface Condition</label>
+                                    <select class="form-control" id="calc-condition">
+                                        <option value="1">Clean / New</option>
+                                        <option value="1.3">Light Rust / Oil</option>
+                                        <option value="2">Heavy Scale / Old Paint</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Batch Quantity</label>
+                                    <input type="number" class="form-control" id="calc-qty" value="1" min="1">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="calc-result-box">
+                        <span class="label-small" style="margin-bottom: 0;">Estimated Range</span>
+                        <div class="calc-result-value" id="calc-result">$---</div>
+                        <p class="calc-result-note">Demo estimate Ã¢â‚¬â€ final pricing requires comprehensive project review and engineering analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 04: PRICING CTA -->
+    <section class="pricing-cta">
+        <div class="container fade-up">
+            <h2>Let's Price the Right Solution.</h2>
+            <p class="text-lead">Submit your technical drawings and specifications for a formal quotation.</p>
+            <button class="btn btn-primary" style="margin-top: 1.5rem;" data-modal-target="quote-modal">Submit Project Details</button>
+        </div>
+    </section>
+
+        <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem;">
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M50 10 L85 25 L85 60 C85 80 50 95 50 95 C50 95 15 80 15 60 L15 25 L50 10 Z" stroke="var(--accent-orange)" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M50 25 L70 35 L70 55 C70 70 50 80 50 80 C50 80 30 70 30 55 L30 35 L50 25 Z" fill="var(--accent-orange)"/>
+    <path d="M35 55 L65 55" stroke="var(--bg-card)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M50 35 L50 70" stroke="var(--bg-card)" stroke-width="3" stroke-linecap="round"/>
+</svg>
+TITANCOAT
+                    </a>
+                    <p style="font-size: 0.875rem; max-width: 300px;">A technically advanced industrial coating company delivering durable, precision-controlled, high-performance surface finishing solutions.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" aria-label="X (Twitter)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></a>
+                        <a href="#" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="services.html">Powder Coating</a>
+                        <a href="services.html">Sandblasting</a>
+                        <a href="services.html">Protective Coatings</a>
+                        <a href="services.html">Industrial Finishing</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <div class="footer-links">
+                        <a href="materials-colors.html">Materials & Colors</a>
+                        <a href="pricing.html">Pricing</a>
+                        <a href="portfolio.html">Project Gallery</a>
+                        <a href="about.html">About Us</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-links">
+                        <a href="contact.html">Sales Enquiries</a>
+                        <a href="contact.html">Technical Support</a>
+                        <a href="#" data-modal-target="quote-modal">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom" style="justify-content: center; position: relative;">
+                <p style="text-align: center; margin: 0;">&copy; 2026 TitanCoat. Engineered Surfaces. &nbsp;&nbsp; <a href="#" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a> &nbsp;&nbsp; <a href="#" style="color: var(--text-muted); text-decoration: none;">Terms of Service</a></p>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top" aria-label="Back to top">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+        <!-- MODAL: QUOTE REQUEST -->
+    <div class="modal-overlay" id="quote-modal">
+        <div class="modal-card">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h3>Request a Coating Quote</h3>
+                <p>Provide your project details for an engineering evaluation.</p>
+            </div>
+            <form onsubmit="event.preventDefault(); alert('Quote Request Submitted! (Demo)'); this.closest('.modal-overlay').classList.remove('active'); document.body.style.overflow = '';">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">Project Type</label>
+                        <select class="form-control" required>
+                            <option value="">Select process...</option>
+                            <option>Powder Coating</option>
+                            <option>Sandblasting</option>
+                            <option>Protective Coating</option>
+                            <option>Metal Finishing</option>
+                            <option>Custom Coating</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Material</label>
+                        <select class="form-control" required>
+                            <option value="">Select substrate...</option>
+                            <option>Steel</option>
+                            <option>Aluminum</option>
+                            <option>Stainless Steel</option>
+                            <option>Cast Iron</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">Estimated Quantity</label>
+                        <input type="number" class="form-control" placeholder="Number of parts" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Required Finish</label>
+                        <select class="form-control" required>
+                            <option value="">Select finish...</option>
+                            <option>Matte</option>
+                            <option>Satin</option>
+                            <option>Gloss</option>
+                            <option>Textured</option>
+                            <option>Metallic</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Project Message / Dimensions</label>
+                    <textarea class="form-control" placeholder="Describe component dimensions, surface condition, and performance needs..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">SUBMIT QUOTE REQUEST</button>
+            </form>
+        </div>
+    </div>
+    <!-- MODAL: AUTHENTICATION -->
+    <div class="modal-overlay" id="auth-modal">
+        <div class="modal-card" style="max-width: 400px;">
+            <button class="modal-close">&times;</button>
+            <div id="login-form-container">
+                <div class="modal-header"><h3>Client Portal</h3></div>
+                <form onsubmit="event.preventDefault(); alert('Login Successful! (Demo)'); this.closest('.modal-overlay').classList.remove('active'); document.body.style.overflow = '';">
+                    <div class="form-group"><input type="email" class="form-control" placeholder="Email" required></div>
+                    <div class="form-group"><input type="password" class="form-control" placeholder="Password" required></div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/rtl.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/modals.js"></script>
+    
+    <!-- Calculator Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('pricing-calculator');
+            const resultEl = document.getElementById('calc-result');
+            
+            function calculateEstimate() {
+                const materialMultiplier = parseFloat(document.getElementById('calc-material').value);
+                const systemBase = parseFloat(document.getElementById('calc-system').value);
+                const conditionMultiplier = parseFloat(document.getElementById('calc-condition').value);
+                const qty = parseInt(document.getElementById('calc-qty').value) || 1;
+                
+                // Demo math formula
+                const baseUnitCost = systemBase * materialMultiplier * conditionMultiplier;
+                // Volume discount curve
+                const volumeMultiplier = Math.max(0.5, 1 - (Math.log10(qty) * 0.15));
+                
+                const finalUnitCost = baseUnitCost * volumeMultiplier;
+                const total = finalUnitCost * qty;
+                
+                // Create a range
+                const min = Math.floor(total * 0.9);
+                const max = Math.ceil(total * 1.15);
+                
+                resultEl.innerText = `$${min.toLocaleString()} - $${max.toLocaleString()}`;
+            }
+
+            form.addEventListener('input', calculateEstimate);
+            calculateEstimate(); // Initial run
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+

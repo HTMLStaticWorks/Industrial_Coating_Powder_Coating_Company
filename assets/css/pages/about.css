@@ -1,0 +1,204 @@
+/* assets/css/pages/about.css */
+
+/* --- SECTION 01 - ABOUT HERO --- */
+.about-hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 5rem;
+    overflow: hidden;
+}
+
+.about-hero-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('../../images/about_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+.about-hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to right, rgba(10,10,10,0.9), rgba(10,10,10,0.3));
+    z-index: 2;
+}
+
+[dir="rtl"] .about-hero-overlay {
+    background: linear-gradient(to left, rgba(10,10,10,0.9), rgba(10,10,10,0.3));
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-hero-content h1 {
+    color: #fff;
+    margin-bottom: var(--space-md);
+}
+
+.about-hero-content p {
+    color: #f0f0f0;
+}
+
+/* --- SECTION 02 - OUR APPROACH --- */
+.approach-section {
+    background-color: var(--bg-primary);
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.approach-item {
+    padding: 2rem;
+    background: var(--bg-card);
+    border-left: 4px solid var(--accent-orange);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    overflow: hidden;
+}
+
+.approach-item-img {
+    width: calc(100% + 4rem);
+    max-width: none;
+    margin: -2rem -2rem 2rem -2rem;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+[dir="rtl"] .approach-item {
+    border-left: none;
+    border-right: 4px solid var(--accent-orange);
+}
+
+.approach-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-md);
+}
+
+.approach-item h3 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.approach-item h3 span {
+    font-size: 2.5rem;
+    color: var(--bg-secondary);
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .approach-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* --- SECTION 03 - FACILITY & TECHNOLOGY --- */
+.facility-section {
+    background-color: var(--bg-secondary);
+    padding: var(--section-pad) 0;
+}
+
+.facility-interactive {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: 500px;
+    background-image: url('../../images/about_facility.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    margin-top: 3rem;
+    overflow: hidden;
+}
+
+.hotspot {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--accent-orange);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 0 10px rgba(255, 90, 0, 0.3);
+    animation: pulse 2s infinite;
+    z-index: 10;
+}
+
+.hotspot::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.hotspot-info {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--bg-card);
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    width: 250px;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-fast);
+    text-align: center;
+}
+
+.hotspot:hover .hotspot-info {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.hotspot-info h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: var(--accent-orange);
+}
+
+.hotspot-info p {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 90, 0, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 90, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 90, 0, 0); }
+}
+
+.hs-1 { top: 30%; left: 20%; }
+.hs-2 { top: 60%; left: 50%; }
+.hs-3 { top: 40%; left: 80%; }
+
+/* --- SECTION 04 - ABOUT CTA --- */
+.about-cta {
+    background-color: var(--industrial-black);
+    color: #fff;
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.about-cta h2 { color: #fff; }

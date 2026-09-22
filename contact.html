@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TitanCoat | Contact Us</title>
+    
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages/contact.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M50 10 L85 25 L85 60 C85 80 50 95 50 95 C50 95 15 80 15 60 L15 25 L50 10 Z" stroke="var(--accent-orange)" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M50 25 L70 35 L70 55 C70 70 50 80 50 80 C50 80 30 70 30 55 L30 35 L50 25 Z" fill="var(--accent-orange)"/>
+    <path d="M35 55 L65 55" stroke="var(--bg-card)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M50 35 L50 70" stroke="var(--bg-card)" stroke-width="3" stroke-linecap="round"/>
+</svg>
+TITANCOAT
+            </a>
+
+            <div class="nav-menu">
+                <div class="nav-item-dropdown"> <a href="#" class="nav-link">Home <svg style="width:16px;height:16px;vertical-align:middle;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a> <div class="dropdown-menu"> <a href="index.html" class="dropdown-link">Home 1</a> <a href="home-2.html" class="dropdown-link">Home 2</a> </div> </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="materials-colors.html" class="nav-link">Materials</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Theme"></button>
+                <button class="rtl-toggle" id="rtl-toggle" title="Toggle RTL" style="display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 4l4 4-4 4"></path><path d="M21 8H3"></path><path d="M7 20l-4-4 4-4"></path><path d="M3 16h18"></path></svg></button>
+                <a href="#" class="btn btn-primary" data-modal-target="quote-modal">REQUEST A QUOTE</a>
+            </div>
+
+            <button class="hamburger"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+        <div class="mobile-nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="home-2.html" class="nav-link">Home 2</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="materials-colors.html" class="nav-link">Materials & Colors</a>
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+        <div class="mobile-top-controls">
+            <button class="theme-toggle">Theme</button>
+            <button class="rtl-toggle" id="rtl-toggle" title="Toggle RTL" style="display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 4l4 4-4 4"></path><path d="M21 8H3"></path><path d="M7 20l-4-4 4-4"></path><path d="M3 16h18"></path></svg></button>
+        </div>
+        <a href="#" class="btn btn-primary" data-modal-target="quote-modal" style="width: 100%; text-align: center;">REQUEST A QUOTE</a>
+    </div>
+
+    <!-- SECTION 01: CONTACT HERO -->
+    <section class="contact-hero">
+        <div class="contact-hero-bg"></div>
+        <div class="contact-hero-overlay"></div>
+        <div class="container relative">
+            <div class="contact-hero-content fade-up">
+                <span class="label-small">Initiate Project</span>
+                <h1>Connect with Engineering.</h1>
+                <p class="text-lead" style="color: #D3D3D3; margin-bottom: 4rem;">Submit your project parameters. Our technical team will review and provide a comprehensive coating specification and cost analysis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 02: MULTI-STEP QUOTATION FORM -->
+    <section class="form-section">
+        <div class="container">
+            <div class="form-container fade-up">
+                <div class="form-progress">
+                    <div class="progress-step active" id="step-marker-1">1<span class="step-label">Basic Info</span></div>
+                    <div class="progress-step" id="step-marker-2">2<span class="step-label">Technical Specs</span></div>
+                    <div class="progress-step" id="step-marker-3">3<span class="step-label">Final Details</span></div>
+                </div>
+                
+                <form id="multi-step-form" onsubmit="event.preventDefault(); alert('Project Inquiry Submitted Successfully!'); window.location.reload();">
+                    
+                    <!-- STEP 1 -->
+                    <div class="form-step active" id="form-step-1">
+                        <h3>1. Company & Contact Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Company Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-actions" style="justify-content: center;">
+                            <button type="button" class="btn btn-primary btn-next">Next Step →</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2 -->
+                    <div class="form-step" id="form-step-2">
+                        <h3>2. Technical Specifications</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label">Substrate Material</label>
+                                <select class="form-control" required>
+                                    <option value="">Select Material...</option>
+                                    <option>Carbon Steel</option>
+                                    <option>Aluminum</option>
+                                    <option>Stainless Steel</option>
+                                    <option>Cast Iron</option>
+                                    <option>Galvanized</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Required Process</label>
+                                <select class="form-control" required>
+                                    <option value="">Select Process...</option>
+                                    <option>Powder Coating</option>
+                                    <option>Wet Protective Coating</option>
+                                    <option>Sandblasting Only</option>
+                                    <option>Not Sure / Needs Engineering</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label">Estimated Annual Volume</label>
+                                <select class="form-control">
+                                    <option>Prototype / Single Batch</option>
+                                    <option>100 - 1,000 units</option>
+                                    <option>1,000 - 10,000 units</option>
+                                    <option>10,000+ units</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Target Mil Thickness (If known)</label>
+                                <input type="text" class="form-control" placeholder="e.g. 2-3 mils">
+                            </div>
+                        </div>
+                        <div class="form-actions" style="justify-content: center; gap: 1rem;">
+                            <button type="button" class="btn btn-outline btn-prev">← Previous</button>
+                            <button type="button" class="btn btn-primary btn-next">Next Step →</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3 -->
+                    <div class="form-step" id="form-step-3">
+                        <h3>3. Project Details & Uploads</h3>
+                        <div class="form-group">
+                            <label class="form-label">Detailed Project Description</label>
+                            <textarea class="form-control" rows="4" placeholder="Describe environmental conditions, specific performance requirements, or custom color matching needs..." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Upload Technical Drawings (PDF, DWG, IGES)</label>
+                            <div style="border: 2px dashed var(--border-color); padding: 2rem; text-align: center; border-radius: var(--radius-sm); margin-bottom: 1rem; cursor: pointer;">
+                                <p style="margin: 0; color: var(--text-secondary);">Click to browse or drag and drop files here</p>
+                            </div>
+                        </div>
+                        <div class="form-actions" style="justify-content: center; gap: 1rem;">
+                            <button type="button" class="btn btn-outline btn-prev">← Previous</button>
+                            <button type="submit" class="btn btn-primary">Submit Project Inquiry</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 03: GLOBAL OPERATIONS MAP -->
+    <section class="map-section">
+        <div class="container fade-up">
+            <span class="label-small">Logistics</span>
+            <h2>Global Fulfillment Reach</h2>
+            <p style="max-width: 600px; margin: 0 auto;">While our primary processing center handles high-volume domestic needs, we maintain strategic partnerships for international specification adherence.</p>
+            
+            <div style="margin-top: 3rem; width: 100%; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-lg);">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d189196.48512140644!2d-83.21045963777263!3d42.35261453259972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824ca0110cb1d75%3A0x5776864e35b9c4d2!2sDetroit%2C%20MI!5e0!3m2!1sen!2sus!4v1695420310245!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 04: DIRECTORY -->
+    <section class="directory-section">
+        <div class="container">
+            <div class="fade-up text-center">
+                <span class="label-small">Direct Access</span>
+                <h2>Department Directory</h2>
+            </div>
+            
+            <div class="directory-grid fade-up">
+                <div class="directory-card">
+                    <h3>Engineering Support</h3>
+                    <p>For specification assistance, substrate compatibility, and performance testing inquiries.</p>
+                    <a href="mailto:engineering@volterracoatings.com" class="directory-link">engineering@volterracoatings.com</a>
+                    <br>
+                    <a href="tel:+18005550199" class="directory-link" style="color: var(--text-primary); font-weight: normal;">+1 (800) 555-0199 ext. 2</a>
+                </div>
+                
+                <div class="directory-card" style="border-color: var(--accent-orange);">
+                    <h3>Sales & Quotations</h3>
+                    <p>For new project pricing, volume agreements, and general capabilities questions.</p>
+                    <a href="mailto:sales@volterracoatings.com" class="directory-link">sales@volterracoatings.com</a>
+                    <br>
+                    <a href="tel:+18005550199" class="directory-link" style="color: var(--text-primary); font-weight: normal;">+1 (800) 555-0199 ext. 1</a>
+                </div>
+                
+                <div class="directory-card">
+                    <h3>Quality Assurance</h3>
+                    <p>For documentation requests, traceability audits, and compliance certifications.</p>
+                    <a href="mailto:qa@volterracoatings.com" class="directory-link">qa@volterracoatings.com</a>
+                    <br>
+                    <a href="tel:+18005550199" class="directory-link" style="color: var(--text-primary); font-weight: normal;">+1 (800) 555-0199 ext. 3</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 05: FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="fade-up text-center">
+                <span class="label-small">Common Questions</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-container fade-up">
+                
+                <div class="faq-item active">
+                    <button class="faq-header">
+                        What is your typical turnaround time for an initial quote?
+                        <span class="faq-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+                    </button>
+                    <div class="faq-body" style="max-height: 500px;">
+                        <div class="faq-content">
+                            <p>Our engineering team typically responds with a comprehensive quotation and technical specification within 48 hours of receiving complete project details and drawings.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-header">
+                        Do you offer expedited coating services?
+                        <span class="faq-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+                    </button>
+                    <div class="faq-body">
+                        <div class="faq-content">
+                            <p>Yes, we offer expedited processing for urgent requirements. Depending on the coating system and current line capacity, we can turn around critical components in as little as 24-72 hours.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-header">
+                        Can you match custom colors or specific gloss levels?
+                        <span class="faq-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+                    </button>
+                    <div class="faq-body">
+                        <div class="faq-content">
+                            <p>Absolutely. We have an in-house color laboratory that can match exact RAL, Pantone, or custom physical samples, precisely controlling the final gloss and texture parameters.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-header">
+                        What substrate materials can you process?
+                        <span class="faq-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+                    </button>
+                    <div class="faq-body">
+                        <div class="faq-content">
+                            <p>We process a wide range of substrates including carbon steel, stainless steel, aluminum, cast iron, and various alloys. Our pre-treatment lines are calibrated specifically for each material type to ensure optimal adhesion.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-header">
+                        Do you provide environmental testing or certification?
+                        <span class="faq-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+                    </button>
+                    <div class="faq-body">
+                        <div class="faq-content">
+                            <p>Yes, we can perform standard quality assurance testing including salt spray (ASTM B117), cross-hatch adhesion, and impact resistance. We provide full compliance documentation upon request.</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+        <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem;">
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M50 10 L85 25 L85 60 C85 80 50 95 50 95 C50 95 15 80 15 60 L15 25 L50 10 Z" stroke="var(--accent-orange)" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M50 25 L70 35 L70 55 C70 70 50 80 50 80 C50 80 30 70 30 55 L30 35 L50 25 Z" fill="var(--accent-orange)"/>
+    <path d="M35 55 L65 55" stroke="var(--bg-card)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M50 35 L50 70" stroke="var(--bg-card)" stroke-width="3" stroke-linecap="round"/>
+</svg>
+TITANCOAT
+                    </a>
+                    <p style="font-size: 0.875rem; max-width: 300px;">A technically advanced industrial coating company delivering durable, precision-controlled, high-performance surface finishing solutions.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" aria-label="X (Twitter)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></a>
+                        <a href="#" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="services.html">Powder Coating</a>
+                        <a href="services.html">Sandblasting</a>
+                        <a href="services.html">Protective Coatings</a>
+                        <a href="services.html">Industrial Finishing</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <div class="footer-links">
+                        <a href="materials-colors.html">Materials & Colors</a>
+                        <a href="pricing.html">Pricing</a>
+                        <a href="portfolio.html">Project Gallery</a>
+                        <a href="about.html">About Us</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-links">
+                        <a href="contact.html">Sales Enquiries</a>
+                        <a href="contact.html">Technical Support</a>
+                        <a href="#" data-modal-target="quote-modal">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom" style="justify-content: center; position: relative;">
+                <p style="text-align: center; margin: 0;">&copy; 2026 TitanCoat. Engineered Surfaces. &nbsp;&nbsp; <a href="#" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a> &nbsp;&nbsp; <a href="#" style="color: var(--text-muted); text-decoration: none;">Terms of Service</a></p>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top" aria-label="Back to top">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+        <!-- MODAL: QUOTE REQUEST -->
+    <div class="modal-overlay" id="quote-modal">
+        <div class="modal-card">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h3>Request a Coating Quote</h3>
+                <p>Provide your project details for an engineering evaluation.</p>
+            </div>
+            <form onsubmit="event.preventDefault(); alert('Quote Request Submitted! (Demo)'); this.closest('.modal-overlay').classList.remove('active'); document.body.style.overflow = '';">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">Project Type</label>
+                        <select class="form-control" required>
+                            <option value="">Select process...</option>
+                            <option>Powder Coating</option>
+                            <option>Sandblasting</option>
+                            <option>Protective Coating</option>
+                            <option>Metal Finishing</option>
+                            <option>Custom Coating</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Material</label>
+                        <select class="form-control" required>
+                            <option value="">Select substrate...</option>
+                            <option>Steel</option>
+                            <option>Aluminum</option>
+                            <option>Stainless Steel</option>
+                            <option>Cast Iron</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">Estimated Quantity</label>
+                        <input type="number" class="form-control" placeholder="Number of parts" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Required Finish</label>
+                        <select class="form-control" required>
+                            <option value="">Select finish...</option>
+                            <option>Matte</option>
+                            <option>Satin</option>
+                            <option>Gloss</option>
+                            <option>Textured</option>
+                            <option>Metallic</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Project Message / Dimensions</label>
+                    <textarea class="form-control" placeholder="Describe component dimensions, surface condition, and performance needs..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">SUBMIT QUOTE REQUEST</button>
+            </form>
+        </div>
+    </div>
+    <!-- MODAL: AUTHENTICATION -->
+    <div class="modal-overlay" id="auth-modal">
+        <div class="modal-card" style="max-width: 400px;">
+            <button class="modal-close">&times;</button>
+            <div id="login-form-container">
+                <div class="modal-header"><h3>Client Portal</h3></div>
+                <form onsubmit="event.preventDefault(); alert('Login Successful! (Demo)'); this.closest('.modal-overlay').classList.remove('active'); document.body.style.overflow = '';">
+                    <div class="form-group"><input type="email" class="form-control" placeholder="Email" required></div>
+                    <div class="form-group"><input type="password" class="form-control" placeholder="Password" required></div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/rtl.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/modals.js"></script>
+    
+    <!-- Multi-step Form Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentStep = 1;
+            const totalSteps = 3;
+            
+            const nextBtns = document.querySelectorAll('.btn-next');
+            const prevBtns = document.querySelectorAll('.btn-prev');
+            
+            function updateForm() {
+                // Update panels
+                document.querySelectorAll('.form-step').forEach(step => {
+                    step.classList.remove('active');
+                });
+                document.getElementById(`form-step-${currentStep}`).classList.add('active');
+                
+                // Update markers
+                for (let i = 1; i <= totalSteps; i++) {
+                    const marker = document.getElementById(`step-marker-${i}`);
+                    marker.classList.remove('active', 'completed');
+                    if (i < currentStep) {
+                        marker.classList.add('completed');
+                    } else if (i === currentStep) {
+                        marker.classList.add('active');
+                    }
+                }
+            }
+            
+            nextBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Simple validation check before proceeding (optional in demo, but good practice)
+                    const inputs = document.getElementById(`form-step-${currentStep}`).querySelectorAll('input[required], select[required]');
+                    let valid = true;
+                    inputs.forEach(input => {
+                        if (!input.value) valid = false;
+                    });
+                    
+                    if (!valid) {
+                        alert('Please fill out required fields.');
+                        return;
+                    }
+                    
+                    if (currentStep < totalSteps) {
+                        currentStep++;
+                        updateForm();
+                    }
+                });
+            });
+            
+            prevBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    if (currentStep > 1) {
+                        currentStep--;
+                        updateForm();
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- FAQ Accordion Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqHeaders = document.querySelectorAll('.faq-header');
+            
+            faqHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const item = this.parentElement;
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all
+                    document.querySelectorAll('.faq-item').forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.faq-body').style.maxHeight = null;
+                    });
+                    
+                    // Open clicked if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                        const body = item.querySelector('.faq-body');
+                        body.style.maxHeight = body.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+

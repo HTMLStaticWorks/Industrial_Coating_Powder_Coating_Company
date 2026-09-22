@@ -1,0 +1,426 @@
+/* assets/css/pages/home2.css */
+
+/* --- SECTION 01 - SPLIT HERO --- */
+.split-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-primary);
+    padding-top: 5rem;
+    overflow: hidden;
+}
+
+.split-hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.split-hero-text h1 {
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    margin-bottom: var(--space-md);
+    line-height: 1.1;
+}
+
+.split-hero-visual {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-3d-model {
+    width: 80%;
+    height: 80%;
+    background-image: url('../../images/home2_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    animation: float3d 10s ease-in-out infinite;
+    position: relative;
+}
+
+.tech-label {
+    position: absolute;
+    background: var(--bg-card);
+    padding: 0.5rem 1rem;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 1px solid var(--accent-orange);
+    color: var(--text-primary);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+}
+
+.tl-1 { top: 10%; left: -10%; }
+.tl-2 { top: 40%; right: -15%; }
+.tl-3 { bottom: 15%; left: -5%; }
+
+[dir="rtl"] .tl-1 { left: auto; right: -10%; }
+[dir="rtl"] .tl-2 { right: auto; left: -15%; }
+[dir="rtl"] .tl-3 { left: auto; right: -5%; }
+
+@keyframes float3d {
+    0% { transform: translateY(0) rotateX(5deg) rotateY(5deg); }
+    50% { transform: translateY(-20px) rotateX(-5deg) rotateY(-5deg); }
+    100% { transform: translateY(0) rotateX(5deg) rotateY(5deg); }
+}
+
+@media (max-width: 1024px) {
+    .split-hero-container { grid-template-columns: 1fr; text-align: center; }
+    .split-hero-visual { height: 400px; }
+    .tl-1, .tl-2, .tl-3 { display: none; }
+}
+
+/* --- SECTION 02 - WHY IT MATTERS (Problem/Solution) --- */
+.problem-solution-section {
+    background-color: var(--bg-secondary);
+}
+
+.ps-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.ps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ps-item {
+    padding: 1.5rem;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.ps-item:hover, .ps-item.active {
+    border-color: var(--accent-orange);
+    box-shadow: var(--shadow-md);
+}
+
+.ps-item.active {
+    background-color: var(--accent-orange);
+    color: #fff;
+}
+
+.ps-display {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: 3rem;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-height: 300px;
+}
+
+.ps-solution {
+    display: none;
+    animation: fadeIn var(--transition-normal);
+}
+
+.ps-solution.active {
+    display: block;
+}
+
+.ps-solution h3 {
+    color: var(--accent-orange);
+    margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .ps-grid { grid-template-columns: 1fr; }
+    .ps-display { min-height: 200px; padding: 1.5rem; }
+}
+
+/* --- SECTION 03 - INDUSTRIES --- */
+.industries-section {
+    overflow: hidden;
+    padding: var(--section-pad) 0;
+}
+
+.slider-arrow {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.slider-arrow:hover {
+    background: var(--accent-orange);
+    border-color: var(--accent-orange);
+    color: #fff;
+}
+
+.industries-track-container {
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+}
+.industries-track-container::-webkit-scrollbar { display: none; } /* Chrome */
+
+.industries-track {
+    display: flex;
+    gap: 2rem;
+}
+
+.industry-card {
+    flex: 0 0 calc((100% - 4rem) / 3);
+    height: 450px;
+    background-color: var(--industrial-black);
+    border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .industry-card {
+        flex: 0 0 calc((100% - 2rem) / 2);
+    }
+}
+
+@media (max-width: 600px) {
+    .industry-card {
+        flex: 0 0 100%;
+    }
+}
+
+.industry-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: transform var(--transition-slow);
+}
+
+.industry-card:hover .industry-card-img {
+    transform: scale(1.05);
+}
+
+.industry-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* We'll use JS to assign a placeholder background color, or just generic tech patterns */
+    background: repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0, rgba(255,255,255,0.02) 2px, transparent 2px, transparent 8px);
+    z-index: 1;
+}
+
+.industry-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    z-index: 2;
+}
+
+.industry-card h3 {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* --- SECTION 04 - FINISH VISUALIZER --- */
+.visualizer-section {
+    background-color: var(--bg-card);
+}
+
+.visualizer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.visualizer-display {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: #fff; /* Base metal object has white background */
+    box-shadow: var(--shadow-lg);
+}
+
+.visualizer-base {
+    width: 100%;
+    display: block;
+}
+
+.visualizer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    transition: background-color var(--transition-normal), opacity var(--transition-normal);
+}
+
+/* Texture overlay for matte/textured finishes */
+.visualizer-texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)" opacity="0.15"/></svg>');
+    mix-blend-mode: overlay;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    pointer-events: none;
+}
+
+.visualizer-controls h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.control-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.v-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+.v-btn:hover, .v-btn.active {
+    border-color: var(--accent-orange);
+    color: var(--accent-orange);
+    background: var(--accent-orange-light);
+}
+
+.color-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.color-btn:hover, .color-btn.active {
+    transform: scale(1.1);
+    border-color: var(--accent-orange);
+}
+
+@media (max-width: 1024px) {
+    .visualizer-grid { grid-template-columns: 1fr; }
+}
+
+/* --- SECTION 05 - QUALITY CONTROL --- */
+.quality-section {
+    position: relative;
+    color: #fff;
+    padding: 8rem 0;
+    background-color: var(--charcoal);
+}
+
+.quality-section h2,
+.quality-section p {
+    color: #fff;
+}
+
+.quality-content {
+    position: relative;
+    z-index: 3;
+}
+
+.qc-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.qc-item {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: var(--radius-sm);
+    text-align: center;
+    backdrop-filter: blur(5px);
+    transition: transform var(--transition-fast);
+}
+
+.qc-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-orange);
+}
+
+.qc-item h4 {
+    color: #fff;
+    font-size: 1rem;
+    margin: 0;
+}
+
+@media (max-width: 1024px) { .qc-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px) { 
+    .qc-grid { 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .qc-item {
+        width: calc(50% - 0.5rem);
+    }
+}
+@media (max-width: 480px) {
+    .qc-item {
+        width: 100%;
+    }
+}
+
+/* --- SECTION 06 - CONSULTATION CTA --- */
+.consultation-cta {
+    background-color: var(--bg-primary);
+    text-align: center;
+    padding: 6rem 0;
+}

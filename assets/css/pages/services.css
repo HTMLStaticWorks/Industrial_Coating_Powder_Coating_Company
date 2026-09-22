@@ -1,0 +1,308 @@
+/* assets/css/pages/services.css */
+
+/* --- SECTION 01 - SERVICES HERO --- */
+.services-hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 5rem;
+    overflow: hidden;
+}
+
+.services-hero-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('../../images/services_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.services-hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(10, 10, 10, 0.7);
+    z-index: 2;
+}
+
+.services-hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services-hero-content h1 {
+    color: #fff;
+    margin-bottom: var(--space-md);
+}
+
+.services-hero-content p {
+    color: #f0f0f0;
+}
+
+/* --- SECTION 01B - SERVICE CARDS --- */
+.service-cards-section {
+    background-color: var(--bg-secondary);
+    padding-bottom: 4rem;
+}
+
+.service-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    text-align: center;
+    overflow: hidden;
+}
+
+.service-card-img {
+    width: calc(100% + 4rem);
+    max-width: none;
+    margin: -2rem -2rem 1.5rem -2rem;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-orange);
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-size: 1.25rem;
+}
+
+.service-card p {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .service-cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .service-cards-grid { grid-template-columns: 1fr; }
+}
+
+/* --- SECTION 02 - SERVICE SYSTEM (EXPANDABLE PANELS) --- */
+.services-system-section {
+    background-color: var(--bg-primary);
+}
+
+.accordion-container {
+    margin-top: 3rem;
+}
+
+.accordion-item {
+    border: 1px solid var(--border-color);
+    margin-bottom: 1rem;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background-color: var(--bg-card);
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background: none;
+    border: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    transition: background-color var(--transition-fast);
+}
+
+[dir="rtl"] .accordion-header {
+    text-align: right;
+}
+
+.accordion-header:hover {
+    background-color: var(--bg-secondary);
+}
+
+.accordion-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-orange);
+    transition: transform var(--transition-normal);
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+    background-color: var(--accent-orange);
+    color: #fff;
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.accordion-content {
+    padding: 0 2rem 2rem 2rem;
+}
+
+.accordion-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.accordion-features li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+[dir="rtl"] .accordion-features li {
+    padding-left: 0;
+    padding-right: 1.5rem;
+}
+
+.accordion-features li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent-orange);
+}
+
+[dir="rtl"] .accordion-features li::before {
+    content: '←';
+    left: auto;
+    right: 0;
+}
+
+@media (max-width: 600px) {
+    .accordion-features { grid-template-columns: 1fr; }
+}
+
+/* --- SECTION 03 - SERVICE COMPARISON --- */
+.comparison-section {
+    background-color: var(--bg-secondary);
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 3rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.comparison-table {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+    background-color: var(--bg-card);
+}
+
+.comparison-table th, .comparison-table td {
+    padding: 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+[dir="rtl"] .comparison-table th, [dir="rtl"] .comparison-table td {
+    text-align: right;
+}
+
+.comparison-table th {
+    background-color: var(--industrial-black);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+.comparison-table td:first-child {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.rating-dots {
+    display: flex;
+    gap: 4px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--border-color);
+}
+
+.dot.active {
+    background-color: var(--accent-orange);
+}
+
+/* Mobile transformation */
+@media (max-width: 800px) {
+    .comparison-table { min-width: 100%; }
+    .comparison-table thead { display: none; }
+    .comparison-table, .comparison-table tbody, .comparison-table tr, .comparison-table td { display: block; width: 100%; }
+    
+    .comparison-table tr { margin-bottom: 1.5rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); }
+    
+    .comparison-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+        padding: 1rem;
+        border-bottom: 1px solid var(--border-light);
+    }
+    
+    [dir="rtl"] .comparison-table td { text-align: left; }
+    
+    .comparison-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+        font-family: var(--font-heading);
+    }
+    
+    .comparison-table td:first-child {
+        background-color: var(--industrial-black);
+        color: #fff;
+        text-align: center;
+        justify-content: center;
+    }
+    .comparison-table td:first-child::before { display: none; }
+}
+
+/* --- SECTION 04 - SERVICE CTA --- */
+.service-cta {
+    background-color: var(--bg-primary);
+    text-align: center;
+    padding: 6rem 0;
+}

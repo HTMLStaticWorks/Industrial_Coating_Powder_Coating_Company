@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TitanCoat | Materials & Colors</title>
+    
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages/materials.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M50 10 L85 25 L85 60 C85 80 50 95 50 95 C50 95 15 80 15 60 L15 25 L50 10 Z" stroke="var(--accent-orange)" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M50 25 L70 35 L70 55 C70 70 50 80 50 80 C50 80 30 70 30 55 L30 35 L50 25 Z" fill="var(--accent-orange)"/>
+    <path d="M35 55 L65 55" stroke="var(--bg-card)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M50 35 L50 70" stroke="var(--bg-card)" stroke-width="3" stroke-linecap="round"/>
+</svg>
+TITANCOAT
+            </a>
+
+            <div class="nav-menu">
+                <div class="nav-item-dropdown"> <a href="#" class="nav-link">Home <svg style="width:16px;height:16px;vertical-align:middle;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a> <div class="dropdown-menu"> <a href="index.html" class="dropdown-link">Home 1</a> <a href="home-2.html" class="dropdown-link">Home 2</a> </div> </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="materials-colors.html" class="nav-link active">Materials</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Theme"></button>
+                <button class="rtl-toggle" id="rtl-toggle" title="Toggle RTL" style="display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 4l4 4-4 4"></path><path d="M21 8H3"></path><path d="M7 20l-4-4 4-4"></path><path d="M3 16h18"></path></svg></button>
+                <a href="#" class="btn btn-primary" data-modal-target="quote-modal">REQUEST A QUOTE</a>
+            </div>
+
+            <button class="hamburger"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+        <div class="mobile-nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="home-2.html" class="nav-link">Home 2</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="materials-colors.html" class="nav-link active">Materials & Colors</a>
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        <div class="mobile-top-controls">
+            <button class="theme-toggle">Theme</button>
+            <button class="rtl-toggle" id="rtl-toggle" title="Toggle RTL" style="display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 4l4 4-4 4"></path><path d="M21 8H3"></path><path d="M7 20l-4-4 4-4"></path><path d="M3 16h18"></path></svg></button>
+        </div>
+        <a href="#" class="btn btn-primary" data-modal-target="quote-modal" style="width: 100%; text-align: center;">REQUEST A QUOTE</a>
+    </div>
+
+    <!-- SECTION 01: MATERIAL HERO -->
+    <section class="materials-hero">
+        <div class="materials-hero-bg"></div>
+        <div class="materials-hero-overlay"></div>
+        <div class="container relative">
+            <div class="materials-hero-content fade-up">
+                <span class="label-small">Substrate Compatibility</span>
+                <h1>The Right Finish Starts with the Right Substrate.</h1>
+                <p class="text-lead" style="color: #D3D3D3;">Different metals require different pre-treatment chemistries and thermal profiles. We engineer the process to the alloy.</p>
+                <div class="materials-list-hero">
+                    <span>Steel</span>
+                    <span>Aluminum</span>
+                    <span>Stainless</span>
+                    <span>Cast Iron</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 02: MATERIAL SELECTOR -->
+    <section class="selector-section">
+        <div class="container">
+            <div class="fade-up">
+                <span class="label-small">Technical Profiles</span>
+                <h2>Substrate Considerations</h2>
+            </div>
+            
+            <div class="selector-container fade-up">
+                <div class="selector-nav" id="material-nav">
+                    <button class="selector-btn active" data-target="mat-steel">Carbon Steel</button>
+                    <button class="selector-btn" data-target="mat-alum">Aluminum Alloys</button>
+                    <button class="selector-btn" data-target="mat-cast">Cast Iron</button>
+                    <button class="selector-btn" data-target="mat-galv">Galvanized Steel</button>
+                </div>
+                
+                <div class="selector-content-area">
+                    <!-- Steel -->
+                    <div class="selector-panel active" id="mat-steel">
+                        <h3>Carbon Steel Processing</h3>
+                        <p>Steel is highly susceptible to rapid oxidation (flash rusting) when exposed to moisture. Proper coating requires complete removal of mill scale and immediate application of a zinc-rich primer.</p>
+                        <div class="considerations-grid">
+                            <div class="consideration-box">
+                                <h4>Pre-treatment Requirement</h4>
+                                <p>Mechanical abrasive blasting (SP-10) is typically required to remove mill scale and establish a 1.5 - 2.5 mil anchor profile.</p>
+                            </div>
+                            <div class="consideration-box">
+                                <h4>Coating System</h4>
+                                <p>Two-coat system recommended: Epoxy primer for corrosion resistance followed by a polyester topcoat for UV stability.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Aluminum -->
+                    <div class="selector-panel" id="mat-alum">
+                        <h3>Aluminum Processing</h3>
+                        <p>Aluminum forms a natural oxide layer that can interfere with coating adhesion. It requires specific chemical conversion processes rather than aggressive mechanical blasting.</p>
+                        <div class="considerations-grid">
+                            <div class="consideration-box">
+                                <h4>Pre-treatment Requirement</h4>
+                                <p>Multi-stage chemical wash including an acid etch and a non-chrome conversion coating (zirconium based).</p>
+                            </div>
+                            <div class="consideration-box">
+                                <h4>Coating System</h4>
+                                <p>Single-coat architectural polyester is often sufficient, providing excellent adhesion and weatherability.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cast Iron -->
+                    <div class="selector-panel" id="mat-cast">
+                        <h3>Cast Iron Processing</h3>
+                        <p>Cast iron is extremely porous and holds trapped gases that can cause "outgassing" (bubbles/pinholes) during the thermal curing process.</p>
+                        <div class="considerations-grid">
+                            <div class="consideration-box">
+                                <h4>Pre-treatment Requirement</h4>
+                                <p>Requires a pre-bake cycle at temperatures higher than the cure temperature to release trapped gases prior to coating.</p>
+                            </div>
+                            <div class="consideration-box">
+                                <h4>Coating System</h4>
+                                <p>Specialized OGF (Outgas Forgiving) primers or powder formulations are necessary to bridge pores smoothly.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Galvanized -->
+                    <div class="selector-panel" id="mat-galv">
+                        <h3>Galvanized Steel Processing</h3>
+                        <p>Galvanized (zinc-coated) steel presents adhesion challenges due to passivators applied at the mill and the smoothness of the zinc layer.</p>
+                        <div class="considerations-grid">
+                            <div class="consideration-box">
+                                <h4>Pre-treatment Requirement</h4>
+                                <p>Light sweep blast ("brush off") to profile the zinc without removing it, followed by specialized chemical cleaning.</p>
+                            </div>
+                            <div class="consideration-box">
+                                <h4>Coating System</h4>
+                                <p>Requires outgas-forgiving powders to prevent bubbling from the porous zinc layer during curing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 03: COLOR & FINISH LAB -->
+    <section class="lab-section">
+        <div class="container">
+            <div class="fade-up">
+                <span class="label-small">Visual Specifications</span>
+                <h2>Color & Finish Laboratory</h2>
+                <p style="max-width: 600px;">Simulate physical surface finishes in real-time. We offer over 6,000 standard formulations and infinite custom matching capabilities.</p>
+            </div>
+            
+            <div class="lab-grid fade-up">
+                <div class="lab-display">
+                    <img src="assets/images/Color%20%26%20Finish%20Laboratory.png" class="lab-base-img" alt="Color & Finish Laboratory">
+                    <div class="lab-overlay" id="lab-overlay"></div>
+                    <div class="lab-metallic" id="lab-metallic"></div>
+                    <div class="lab-texture" id="lab-texture"></div>
+                </div>
+                
+                <div class="lab-controls">
+                    <div class="lab-category">
+                        <h4>Industrial Core Colors</h4>
+                        <div class="color-palette" id="core-colors">
+                            <div class="palette-swatch active" style="background-color: #FF5A00;" data-color="#FF5A00" title="Safety Orange"></div>
+                            <div class="palette-swatch" style="background-color: #FFD700;" data-color="#FFD700" title="Safety Yellow"></div>
+                            <div class="palette-swatch" style="background-color: #E32636;" data-color="#E32636" title="Fire Red"></div>
+                            <div class="palette-swatch" style="background-color: #0047AB;" data-color="#0047AB" title="Machine Blue"></div>
+                            <div class="palette-swatch" style="background-color: #008000;" data-color="#008000" title="Safety Green"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="lab-category">
+                        <h4>Architectural Neutrals</h4>
+                        <div class="color-palette" id="neutral-colors">
+                            <div class="palette-swatch" style="background-color: #1A1A1A;" data-color="#1A1A1A" title="Jet Black"></div>
+                            <div class="palette-swatch" style="background-color: #4A4A4A;" data-color="#4A4A4A" title="Charcoal"></div>
+                            <div class="palette-swatch" style="background-color: #808080;" data-color="#808080" title="Machine Gray"></div>
+                            <div class="palette-swatch" style="background-color: #D3D3D3;" data-color="#D3D3D3" title="Light Gray"></div>
+                            <div class="palette-swatch" style="background-color: #FFFFFF;" data-color="#FFFFFF" title="Clean White"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="lab-category">
+                        <h4>Surface Texture</h4>
+                        <div class="finish-types" id="texture-controls">
+                            <button class="finish-btn active" data-type="smooth" data-opacity="0.8">Smooth</button>
+                            <button class="finish-btn" data-type="texture" data-opacity="0.9">Fine Texture</button>
+                            <button class="finish-btn" data-type="metallic" data-opacity="0.85">Metallic</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 04: COLOR CTA -->
+    <section class="color-cta">
+        <div class="container fade-up">
+            <h2>Have a Custom Color Requirement?</h2>
+            <p class="text-lead">Provide us with a physical sample or RAL/Pantone code, and our lab will formulate a custom match.</p>
+            <button class="btn btn-primary" style="margin-top: 1.5rem;" data-modal-target="quote-modal">Request Color Match</button>
+        </div>
+    </section>
+
+        <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem;">
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M50 10 L85 25 L85 60 C85 80 50 95 50 95 C50 95 15 80 15 60 L15 25 L50 10 Z" stroke="var(--accent-orange)" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M50 25 L70 35 L70 55 C70 70 50 80 50 80 C50 80 30 70 30 55 L30 35 L50 25 Z" fill="var(--accent-orange)"/>
+    <path d="M35 55 L65 55" stroke="var(--bg-card)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M50 35 L50 70" stroke="var(--bg-card)" stroke-width="3" stroke-linecap="round"/>
+</svg>
+TITANCOAT
+                    </a>
+                    <p style="font-size: 0.875rem; max-width: 300px;">A technically advanced industrial coating company delivering durable, precision-controlled, high-performance surface finishing solutions.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" aria-label="X (Twitter)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></a>
+                        <a href="#" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="services.html">Powder Coating</a>
+                        <a href="services.html">Sandblasting</a>
+                        <a href="services.html">Protective Coatings</a>
+                        <a href="services.html">Industrial Finishing</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <div class="footer-links">
+                        <a href="materials-colors.html">Materials & Colors</a>
+                        <a href="pricing.html">Pricing</a>
+                        <a href="portfolio.html">Project Gallery</a>
+                        <a href="about.html">About Us</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-links">
+                        <a href="contact.html">Sales Enquiries</a>
+                        <a href="contact.html">Technical Support</a>
+                        <a href="#" data-modal-target="quote-modal">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom" style="justify-content: center; position: relative;">
+                <p style="text-align: center; margin: 0;">&copy; 2026 TitanCoat. Engineered Surfaces. &nbsp;&nbsp; <a href="#" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a> &nbsp;&nbsp; <a href="#" style="color: var(--text-muted); text-decoration: none;">Terms of Service</a></p>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top" aria-label="Back to top">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+        <!-- MODAL: QUOTE REQUEST -->
+    <div class="modal-overlay" id="quote-modal">
+        <div class="modal-card">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h3>Request a Coating Quote</h3>
+                <p>Provide your project details for an engineering evaluation.</p>
+            </div>
+            <form onsubmit="event.preventDefault(); alert('Quote Request Submitted! (Demo)'); this.closest('.modal-overlay').classList.remove('active'); document.body.style.overflow = '';">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">Project Type</label>
+                        <select class="form-control" required>
+                            <option value="">Select process...</option>
+                            <option>Powder Coating</option>
+                            <option>Sandblasting</option>
+                            <option>Protective Coating</option>
+                            <option>Metal Finishing</option>
+                            <option>Custom Coating</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Material</label>
+                        <select class="form-control" required>
+                            <option value="">Select substrate...</option>
+                            <option>Steel</option>
+                            <option>Aluminum</option>
+                            <option>Stainless Steel</option>
+                            <option>Cast Iron</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">Estimated Quantity</label>
+                        <input type="number" class="form-control" placeholder="Number of parts" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Required Finish</label>
+                        <select class="form-control" required>
+                            <option value="">Select finish...</option>
+                            <option>Matte</option>
+                            <option>Satin</option>
+                            <option>Gloss</option>
+                            <option>Textured</option>
+                            <option>Metallic</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Project Message / Dimensions</label>
+                    <textarea class="form-control" placeholder="Describe component dimensions, surface condition, and performance needs..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">SUBMIT QUOTE REQUEST</button>
+            </form>
+        </div>
+    </div>
+    <!-- MODAL: AUTHENTICATION -->
+    <div class="modal-overlay" id="auth-modal">
+        <div class="modal-card" style="max-width: 400px;">
+            <button class="modal-close">&times;</button>
+            <div id="login-form-container">
+                <div class="modal-header"><h3>Client Portal</h3></div>
+                <form onsubmit="event.preventDefault(); alert('Login Successful! (Demo)'); this.closest('.modal-overlay').classList.remove('active'); document.body.style.overflow = '';">
+                    <div class="form-group"><input type="email" class="form-control" placeholder="Email" required></div>
+                    <div class="form-group"><input type="password" class="form-control" placeholder="Password" required></div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/rtl.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/modals.js"></script>
+    
+    <!-- Page Specific Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Material Selector Tabs
+            const navBtns = document.querySelectorAll('.selector-btn');
+            const panels = document.querySelectorAll('.selector-panel');
+            
+            navBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    navBtns.forEach(b => b.classList.remove('active'));
+                    panels.forEach(p => p.classList.remove('active'));
+                    
+                    btn.classList.add('active');
+                    document.getElementById(btn.getAttribute('data-target')).classList.add('active');
+                });
+            });
+
+            // Color & Finish Lab
+            const swatches = document.querySelectorAll('.palette-swatch');
+            const finishBtns = document.querySelectorAll('.finish-btn');
+            const overlay = document.getElementById('lab-overlay');
+            const texture = document.getElementById('lab-texture');
+            const metallic = document.getElementById('lab-metallic');
+
+            let currentOpacity = '0.8';
+
+            swatches.forEach(sw => {
+                sw.addEventListener('click', () => {
+                    swatches.forEach(s => s.classList.remove('active'));
+                    sw.classList.add('active');
+                    overlay.style.backgroundColor = sw.getAttribute('data-color');
+                });
+            });
+
+            finishBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    finishBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    const type = btn.getAttribute('data-type');
+                    currentOpacity = btn.getAttribute('data-opacity');
+                    overlay.style.opacity = currentOpacity;
+                    
+                    texture.style.opacity = (type === 'texture') ? '1' : '0';
+                    metallic.style.opacity = (type === 'metallic') ? '1' : '0';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+

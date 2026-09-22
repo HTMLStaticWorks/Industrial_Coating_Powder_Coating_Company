@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TitanCoat | Engineered Surfaces</title>
+    <meta name="description" content="High-performance powder coating, surface preparation and industrial finishing engineered for durability, consistency and demanding environments.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages/home.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M50 10 L85 25 L85 60 C85 80 50 95 50 95 C50 95 15 80 15 60 L15 25 L50 10 Z" stroke="var(--accent-orange)" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M50 25 L70 35 L70 55 C70 70 50 80 50 80 C50 80 30 70 30 55 L30 35 L50 25 Z" fill="var(--accent-orange)"/>
+    <path d="M35 55 L65 55" stroke="var(--bg-card)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M50 35 L50 70" stroke="var(--bg-card)" stroke-width="3" stroke-linecap="round"/>
+</svg>
+TITANCOAT
+            </a>
+
+            <div class="nav-menu">
+                <div class="nav-item-dropdown"> <a href="#" class="nav-link">Home <svg style="width:16px;height:16px;vertical-align:middle;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a> <div class="dropdown-menu"> <a href="index.html" class="dropdown-link">Home 1</a> <a href="home-2.html" class="dropdown-link">Home 2</a> </div> </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="materials-colors.html" class="nav-link">Materials</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <!-- Icon injected by JS -->
+                </button>
+                <button class="rtl-toggle" id="rtl-toggle" title="Toggle RTL" style="display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 4l4 4-4 4"></path><path d="M21 8H3"></path><path d="M7 20l-4-4 4-4"></path><path d="M3 16h18"></path></svg></button>
+                <a href="#" class="btn btn-primary" data-modal-target="quote-modal">REQUEST A QUOTE</a>
+            </div>
+
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+        <div class="mobile-nav-links">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="home-2.html" class="nav-link">Home 2</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="materials-colors.html" class="nav-link">Materials & Colors</a>
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        <div class="mobile-top-controls">
+            <button class="theme-toggle">Theme</button>
+            <button class="rtl-toggle" id="rtl-toggle" title="Toggle RTL" style="display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 4l4 4-4 4"></path><path d="M21 8H3"></path><path d="M7 20l-4-4 4-4"></path><path d="M3 16h18"></path></svg></button>
+        </div>
+        <a href="#" class="btn btn-primary" data-modal-target="quote-modal" style="width: 100%; text-align: center;">REQUEST A QUOTE</a>
+    </div>
+
+    <!-- SECTION 01: HERO -->
+    <section class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container relative">
+            <div class="hero-content fade-up">
+                <span class="label-small">Advanced Surface Engineering</span>
+                <h1>Engineered Surfaces.<br>Built to Perform.</h1>
+                <p>High-performance powder coating, surface preparation and industrial finishing engineered for durability, consistency and demanding environments.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" data-modal-target="quote-modal">Request a Coating Quote</button>
+                    <a href="services.html" class="btn btn-outline" style="color: #fff; border-color: #fff;">Explore Capabilities</a>
+                </div>
+            </div>
+            <div class="hero-3d-object fade-up" style="transition-delay: 0.3s; display: flex; align-items: center; justify-content: center;">
+                <img src="assets/images/home1-hero.png" alt="Home Hero Image" class="spin-anti" style="max-width: 100%; height: auto; border-radius: 50%; object-fit: cover; aspect-ratio: 1/1; box-shadow: var(--shadow-md);">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 02: CAPABILITY MATRIX -->
+    <section class="capability-section">
+        <div class="container">
+            <div class="fade-up">
+                <span class="label-small">Core Competencies</span>
+                <h2>Coating Capability, Engineered Around Your Application.</h2>
+            </div>
+            
+            <div class="matrix-grid">
+                <!-- Card 1 -->
+                <div class="matrix-item fade-up">
+                    <h3>Powder Coating</h3>
+                    <p>Electrostatic application for superior coverage, delivering extreme durability and corrosion resistance across demanding industrial environments.</p>
+                    <div class="progress-group">
+                        <div class="progress-label"><span>Durability</span><span>95%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" data-width="95%"></div></div>
+                    </div>
+                    <div class="progress-group">
+                        <div class="progress-label"><span>Corrosion Resistance</span><span>98%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" data-width="98%"></div></div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="matrix-item fade-up" style="transition-delay: 0.1s;">
+                    <h3>Sandblasting</h3>
+                    <p>Aggressive surface preparation to remove contaminants, rust, and scale, ensuring optimal adhesion for subsequent protective layers.</p>
+                    <div class="progress-group">
+                        <div class="progress-label"><span>Surface Profiling</span><span>100%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" data-width="100%"></div></div>
+                    </div>
+                    <div class="progress-group">
+                        <div class="progress-label"><span>Adhesion Prep</span><span>99%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" data-width="99%"></div></div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="matrix-item fade-up" style="transition-delay: 0.2s;">
+                    <h3>Protective Coatings</h3>
+                    <p>Specialized wet coatings formulated for extreme chemical resistance and structural protection in harsh marine and industrial sites.</p>
+                    <div class="progress-group">
+                        <div class="progress-label"><span>Chemical Resistance</span><span>96%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" data-width="96%"></div></div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="matrix-item fade-up" style="transition-delay: 0.3s;">
+                    <h3>Industrial Finishing</h3>
+                    <p>Controlled finishing processes delivering precise textures, gloss levels, and aesthetic appearances without compromising performance.</p>
+                    <div class="progress-group">
+                        <div class="progress-label"><span>Aesthetic Control</span><span>94%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" data-width="94%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 03: THE COATING PROCESS -->
+    <section class="process-section">
+        <div class="container">
+            <div class="fade-up text-center">
+                <span class="label-small">Workflow</span>
+                <h2>Precision at Every Step.</h2>
+            </div>
+            
+            <div class="timeline-container fade-up" id="timeline-container">
+                <div class="timeline-line">
+                    <div class="timeline-line-active" id="timeline-progress"></div>
+                </div>
+                
+                <div class="timeline-step">
+                    <div class="step-number">01</div>
+                    <div class="step-title">Inspect</div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">02</div>
+                    <div class="step-title">Prepare</div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">03</div>
+                    <div class="step-title">Coat</div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">04</div>
+                    <div class="step-title">Cure</div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">05</div>
+                    <div class="step-title">Inspect</div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">06</div>
+                    <div class="step-title">Release</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 04: MATERIAL INTELLIGENCE -->
+    <section class="material-section">
+        <div class="container material-container">
+            <div class="material-image-wrapper fade-up">
+                <div class="card-image-container">
+                    <img src="assets/images/The%20Surface%20Starts%20with%20the%20Substrate.png" alt="Material Substrates" class="material-img">
+                </div>
+            </div>
+            <div class="material-content">
+                <div class="material-content-inner fade-up">
+                    <span class="label-small">Substrate Compatibility</span>
+                    <h2>The Surface Starts with the Substrate.</h2>
+                    <p>We engineer coating solutions specifically tailored to the unique metallurgical properties of your base material to ensure maximum bond strength.</p>
+                    
+                    <div class="material-list">
+                        <div class="material-item">
+                            <h4>Steel</h4>
+                            <p>High structural integrity, requires aggressive prep and anti-corrosion base.</p>
+                        </div>
+                        <div class="material-item">
+                            <h4>Aluminum</h4>
+                            <p>Lightweight, demands specific pre-treatment to prevent oxidation issues.</p>
+                        </div>
+                        <div class="material-item">
+                            <h4>Stainless Steel</h4>
+                            <p>Corrosion resistant, needs profiling for mechanical adhesion.</p>
+                        </div>
+                        <div class="material-item">
+                            <h4>Cast Iron</h4>
+                            <p>Porous structure, requires outgassing control during cure cycle.</p>
+                        </div>
+                    </div>
+                    
+                    <a href="materials-colors.html" class="btn btn-outline" style="margin-top: 2rem;">Explore Materials & Colors</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 05: PERFORMANCE NUMBERS -->
+    <section class="performance-section">
+        <div class="container">
+            <div class="stats-grid" id="stats-container">
+                <div class="stat-item fade-up">
+                    <span class="stat-number" data-target="500">0</span>
+                    <span class="stat-plus">+</span>
+                    <h4>Projects Completed</h4>
+                </div>
+                <div class="stat-item fade-up" style="transition-delay: 0.1s;">
+                    <span class="stat-number" data-target="25">0</span>
+                    <span class="stat-plus">+</span>
+                    <h4>Coating Systems</h4>
+                </div>
+                <div class="stat-item fade-up" style="transition-delay: 0.2s;">
+                    <span class="stat-number" data-target="99">0</span>
+                    <span class="stat-plus">%</span>
+                    <h4>Inspection Compliance</h4>
+                </div>
+                <div class="stat-item fade-up" style="transition-delay: 0.3s;">
+                    <span class="stat-number" data-target="48">0</span>
+                    <span class="stat-plus">HR</span>
+                    <h4>Typical Quote Response</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 06: FINAL CTA -->
+    <section class="cta-section">
+        <div class="container relative">
+            <div class="cta-content fade-up">
+                <h2>Give Your Surface a Better Defense.</h2>
+                <p class="text-lead">Tell us about your component, environment and performance requirements. We'll help identify the right coating approach.</p>
+                <button class="btn btn-outline" data-modal-target="quote-modal" style="margin-top: 1rem; color: #fff; border-color: #fff;">Request a Coating Quote</button>
+            </div>
+        </div>
+    </section>
+
+        <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem;">
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M50 10 L85 25 L85 60 C85 80 50 95 50 95 C50 95 15 80 15 60 L15 25 L50 10 Z" stroke="var(--accent-orange)" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M50 25 L70 35 L70 55 C70 70 50 80 50 80 C50 80 30 70 30 55 L30 35 L50 25 Z" fill="var(--accent-orange)"/>
+    <path d="M35 55 L65 55" stroke="var(--bg-card)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M50 35 L50 70" stroke="var(--bg-card)" stroke-width="3" stroke-linecap="round"/>
+</svg>
+TITANCOAT
+                    </a>
+                    <p style="font-size: 0.875rem; max-width: 300px;">A technically advanced industrial coating company delivering durable, precision-controlled, high-performance surface finishing solutions.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" aria-label="X (Twitter)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></a>
+                        <a href="#" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="services.html">Powder Coating</a>
+                        <a href="services.html">Sandblasting</a>
+                        <a href="services.html">Protective Coatings</a>
+                        <a href="services.html">Industrial Finishing</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <div class="footer-links">
+                        <a href="materials-colors.html">Materials & Colors</a>
+                        <a href="pricing.html">Pricing</a>
+                        <a href="portfolio.html">Project Gallery</a>
+                        <a href="about.html">About Us</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-links">
+                        <a href="contact.html">Sales Enquiries</a>
+                        <a href="contact.html">Technical Support</a>
+                        <a href="#" data-modal-target="quote-modal">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom" style="justify-content: center; position: relative;">
+                <p style="text-align: center; margin: 0;">&copy; 2026 TitanCoat. Engineered Surfaces. &nbsp;&nbsp; <a href="#" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a> &nbsp;&nbsp; <a href="#" style="color: var(--text-muted); text-decoration: none;">Terms of Service</a></p>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top" aria-label="Back to top">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+        <!-- MODAL: QUOTE REQUEST -->
+    <div class="modal-overlay" id="quote-modal">
+        <div class="modal-card">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h3>Request a Coating Quote</h3>
+                <p>Provide your project details for an engineering evaluation.</p>
+            </div>
+            <form onsubmit="event.preventDefault(); alert('Quote Request Submitted! (Demo)'); this.closest('.modal-overlay').classList.remove('active'); document.body.style.overflow = '';">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">Project Type</label>
+                        <select class="form-control" required>
+                            <option value="">Select process...</option>
+                            <option>Powder Coating</option>
+                            <option>Sandblasting</option>
+                            <option>Protective Coating</option>
+                            <option>Metal Finishing</option>
+                            <option>Custom Coating</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Material</label>
+                        <select class="form-control" required>
+                            <option value="">Select substrate...</option>
+                            <option>Steel</option>
+                            <option>Aluminum</option>
+                            <option>Stainless Steel</option>
+                            <option>Cast Iron</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">Estimated Quantity</label>
+                        <input type="number" class="form-control" placeholder="Number of parts" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Required Finish</label>
+                        <select class="form-control" required>
+                            <option value="">Select finish...</option>
+                            <option>Matte</option>
+                            <option>Satin</option>
+                            <option>Gloss</option>
+                            <option>Textured</option>
+                            <option>Metallic</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Project Message / Dimensions</label>
+                    <textarea class="form-control" placeholder="Describe component dimensions, surface condition, and performance needs..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">SUBMIT QUOTE REQUEST</button>
+            </form>
+        </div>
+    </div>
+    <!-- MODAL: AUTHENTICATION -->
+    <div class="modal-overlay" id="auth-modal">
+        <div class="modal-card" style="max-width: 400px;">
+            <button class="modal-close">&times;</button>
+            
+            <div id="login-form-container">
+                <div class="modal-header">
+                    <h3>Client Portal</h3>
+                    <p>Access your project specifications.</p>
+                </div>
+                <form onsubmit="event.preventDefault(); alert('Login Successful! (Demo)'); this.closest('.modal-overlay').classList.remove('active'); document.body.style.overflow = '';">
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Sign In</button>
+                    <div style="text-align: center;">
+                        <a href="#" data-auth-toggle="register" style="color: var(--accent-orange); font-size: 0.875rem; font-weight: 500;">Create an Account</a>
+                    </div>
+                </form>
+            </div>
+
+            <div id="register-form-container" style="display: none;">
+                <div class="modal-header">
+                    <h3>Create Account</h3>
+                    <p>Register for project tracking.</p>
+                </div>
+                <form onsubmit="event.preventDefault(); alert('Registration Successful! (Demo)'); this.closest('.modal-overlay').classList.remove('active'); document.body.style.overflow = '';">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Company</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Create Account</button>
+                    <div style="text-align: center;">
+                        <a href="#" data-auth-toggle="login" style="color: var(--accent-orange); font-size: 0.875rem; font-weight: 500;">Back to Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/rtl.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/modals.js"></script>
+    
+    <!-- Page Specific Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animate progress bars on scroll
+            const progressFills = document.querySelectorAll('.progress-fill');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const width = entry.target.getAttribute('data-width');
+                        entry.target.style.width = width;
+                    }
+                });
+            }, { threshold: 0.5 });
+            progressFills.forEach(fill => observer.observe(fill));
+
+            // Animate timeline line
+            const timelineContainer = document.getElementById('timeline-container');
+            const timelineProgress = document.getElementById('timeline-progress');
+            if(timelineContainer && timelineProgress) {
+                const lineObserver = new IntersectionObserver((entries) => {
+                    if (entries[0].isIntersecting) {
+                        timelineProgress.style.width = '100%';
+                        if(window.innerWidth <= 900) {
+                            timelineProgress.style.width = '100%'; // Full width in mobile is basically 100% height since it's transformed? No, css handles height in media query, so we should set height
+                            timelineProgress.style.height = '100%';
+                        }
+                    }
+                }, { threshold: 0.3 });
+                lineObserver.observe(timelineContainer);
+            }
+
+            // Animate number counters
+            const statsContainer = document.getElementById('stats-container');
+            const statNumbers = document.querySelectorAll('.stat-number');
+            let animated = false;
+            
+            if(statsContainer) {
+                const statsObserver = new IntersectionObserver((entries) => {
+                    if (entries[0].isIntersecting && !animated) {
+                        animated = true;
+                        statNumbers.forEach(stat => {
+                            const target = +stat.getAttribute('data-target');
+                            let count = 0;
+                            const speed = target / 50; 
+                            const updateCount = () => {
+                                count += speed;
+                                if (count < target) {
+                                    stat.innerText = Math.ceil(count);
+                                    setTimeout(updateCount, 40);
+                                } else {
+                                    stat.innerText = target;
+                                }
+                            };
+                            updateCount();
+                        });
+                    }
+                }, { threshold: 0.5 });
+                statsObserver.observe(statsContainer);
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
