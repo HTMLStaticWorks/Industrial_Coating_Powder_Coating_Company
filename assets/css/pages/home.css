@@ -467,7 +467,16 @@
     font-weight: 700;
     color: var(--accent-orange);
     margin-bottom: 0.5rem;
-    display: block;
+    display: inline-block;
+}
+
+.stat-plus {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight: 700;
+    color: var(--accent-orange);
+    margin-bottom: 0.5rem;
+    display: inline-block;
 }
 
 .stat-item h4 {

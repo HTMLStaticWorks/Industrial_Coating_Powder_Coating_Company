@@ -52,7 +52,7 @@
 }
 
 [data-theme="dark"] .logo,
-[data-theme="dark"] .navbar .nav-link {
+[data-theme="dark"] .nav-link {
   color: #ffffff !important;
 }
 
@@ -287,7 +287,6 @@
 .footer {
   background-color: var(--bg-footer);
   padding: 4rem 0 2rem 0;
-  border-top: 15px solid var(--accent-orange);
 }
 
 .footer-grid {
