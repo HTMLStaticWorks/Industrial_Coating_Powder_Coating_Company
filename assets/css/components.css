@@ -222,8 +222,10 @@
   transition: right var(--transition-normal);
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 6rem 2rem 2rem 2rem;
   overflow-y: auto;
+  text-align: center;
 }
 
 [dir="rtl"] .mobile-menu {
@@ -243,23 +245,45 @@
 .mobile-top-controls {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
   margin-top: 1rem;
   padding-top: 2rem;
   border-top: 1px solid var(--border-color);
   margin-bottom: 2rem;
+  width: 100%;
+  max-width: 360px;
 }
 
 .mobile-nav-links {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 1.5rem;
   margin-bottom: 2rem;
+  width: 100%;
+  text-align: center;
 }
 
 .mobile-nav-links .nav-link {
   font-size: 1.25rem;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu .btn,
+.mobile-menu .btn-primary {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 340px;
+  width: 100% !important;
 }
 
 .mobile-login-card {
@@ -271,15 +295,18 @@
   margin-top: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
+  width: 100%;
+  max-width: 360px;
 }
 
-@media (max-width: 1024px) {
-  .nav-menu, .nav-actions .btn, .nav-actions .theme-toggle, .nav-actions .rtl-toggle, .nav-actions .login-btn {
+@media (max-width: 1343px) {
+  .nav-menu, .nav-actions, .nav-actions .btn, .nav-actions .theme-toggle, .nav-actions .rtl-toggle, .nav-actions .login-btn {
     display: none !important;
   }
   .hamburger {
-    display: block;
+    display: block !important;
   }
 }
 
