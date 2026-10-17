@@ -6,8 +6,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 8rem;
-    padding-bottom: 4rem;
+    padding-top: 5rem;
     overflow: hidden;
     background-color: var(--industrial-black);
 }
@@ -295,4 +294,15 @@
     background-color: var(--bg-primary);
     text-align: center;
     padding: 6rem 0;
+}
+
+.pricing-cta .btn-outline {
+    border-color: var(--accent-orange) !important;
+    color: var(--accent-orange) !important;
+    font-weight: 600;
+}
+
+.pricing-cta .btn-outline:hover {
+    background-color: var(--accent-orange) !important;
+    color: #FFFFFF !important;
 }

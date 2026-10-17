@@ -1,4 +1,4 @@
-﻿/* assets/css/pages/materials.css */
+/* assets/css/pages/materials.css */
 
 /* --- SECTION 01 - MATERIAL HERO --- */
 .materials-hero {
@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 10rem;
+    padding-top: 5rem;
     overflow: hidden;
 }
 
@@ -366,4 +366,15 @@
     font-size: 1rem !important;
     font-weight: 700 !important;
     margin-bottom: 1rem !important;
+}
+
+.color-cta .btn-outline {
+    border-color: var(--accent-orange) !important;
+    color: var(--accent-orange) !important;
+    font-weight: 600;
+}
+
+.color-cta .btn-outline:hover {
+    background-color: var(--accent-orange) !important;
+    color: #FFFFFF !important;
 }

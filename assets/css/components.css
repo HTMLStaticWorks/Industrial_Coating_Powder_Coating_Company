@@ -538,3 +538,95 @@ textarea.form-control {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   MODAL DUAL-MODE TABS (Production RFQ vs Technical Consultation)
+   ========================================================================== */
+.modal-tab-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.modal-tab-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0.65rem 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.modal-tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.modal-tab-btn.active {
+  color: var(--accent-orange);
+  border-bottom-color: var(--accent-orange);
+}
+
+/* ==========================================================================
+   REQUIREMENT MATCHING & NEXT-STEP CTA BUTTONS (Shared across all pages)
+   ========================================================================== */
+.req-match-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: var(--accent-orange-light);
+  color: var(--accent-orange);
+  margin-bottom: 0.75rem;
+  width: fit-content;
+}
+
+.service-card-cta-btn {
+  width: 100%;
+  margin-top: auto;
+  padding: 0.7rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--accent-orange);
+  border: 1px solid var(--accent-orange);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.service-card-cta-btn:hover {
+  background: var(--accent-orange);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 90, 0, 0.25);
+}
+
+.service-card-cta-btn.primary {
+  background: var(--accent-orange);
+  color: #ffffff;
+}
+
+.service-card-cta-btn.primary:hover {
+  background: #e05000;
+  color: #ffffff;
+}
+

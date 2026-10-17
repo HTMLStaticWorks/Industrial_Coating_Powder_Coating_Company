@@ -99,7 +99,7 @@
 .approach-item h3 span {
     font-size: 2.5rem;
     color: var(--accent-orange);
-    font-weight: 700;
+    font-weight: 600;
 }
 
 @media (max-width: 768px) {
@@ -202,3 +202,5 @@
 }
 
 .about-cta h2 { color: #fff; }
+.about-cta p,
+.about-cta .text-lead { color: #f0f0f0; }

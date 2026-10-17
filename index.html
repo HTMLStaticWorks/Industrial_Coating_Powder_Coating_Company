@@ -133,6 +133,7 @@ TITANCOAT
             <div class="matrix-grid">
                 <!-- Card 1 -->
                 <div class="matrix-item fade-up">
+                    <span class="req-match-pill">Best For: High-Volume Metal & All-Weather Durability</span>
                     <h3>Powder Coating</h3>
                     <p>Electrostatic application for superior coverage, delivering extreme durability and corrosion resistance across demanding industrial environments.</p>
                     <div class="progress-group">
@@ -143,10 +144,12 @@ TITANCOAT
                         <div class="progress-label"><span>Corrosion Resistance</span><span>98%</span></div>
                         <div class="progress-bar"><div class="progress-fill" data-width="98%"></div></div>
                     </div>
+                    <button class="service-card-cta-btn" style="margin-top: 1.5rem;" data-modal-target="quote-modal" data-preselect-system="Thermoset Powder Coatings">Request Powder Coating Quote &rarr;</button>
                 </div>
                 
                 <!-- Card 2 -->
                 <div class="matrix-item fade-up" style="transition-delay: 0.1s;">
+                    <span class="req-match-pill">Best For: Rust Stripping, Descaling & Adhesion Grip</span>
                     <h3>Sandblasting</h3>
                     <p>Aggressive surface preparation to remove contaminants, rust, and scale, ensuring optimal adhesion for subsequent protective layers.</p>
                     <div class="progress-group">
@@ -157,26 +160,39 @@ TITANCOAT
                         <div class="progress-label"><span>Adhesion Prep</span><span>99%</span></div>
                         <div class="progress-bar"><div class="progress-fill" data-width="99%"></div></div>
                     </div>
+                    <button class="service-card-cta-btn" style="margin-top: 1.5rem;" data-modal-target="quote-modal" data-preselect-system="Sandblasting & Surface Prep">Request Sandblasting Quote &rarr;</button>
                 </div>
                 
                 <!-- Card 3 -->
                 <div class="matrix-item fade-up" style="transition-delay: 0.2s;">
+                    <span class="req-match-pill">Best For: Chemical Immersion & Offshore Marine C5-M</span>
                     <h3>Protective Coatings</h3>
                     <p>Specialized wet coatings formulated for extreme chemical resistance and structural protection in harsh marine and industrial sites.</p>
                     <div class="progress-group">
                         <div class="progress-label"><span>Chemical Resistance</span><span>96%</span></div>
                         <div class="progress-bar"><div class="progress-fill" data-width="96%"></div></div>
                     </div>
+                    <div class="progress-group">
+                        <div class="progress-label"><span>Immersion Defense</span><span>95%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" data-width="95%"></div></div>
+                    </div>
+                    <button class="service-card-cta-btn" style="margin-top: 1.5rem;" data-modal-target="quote-modal" data-preselect-system="High-Performance Liquid Coatings">Request Protective Coating Quote &rarr;</button>
                 </div>
 
                 <!-- Card 4 -->
                 <div class="matrix-item fade-up" style="transition-delay: 0.3s;">
+                    <span class="req-match-pill">Best For: Fine Textures, Anti-Glare & Custom Colors</span>
                     <h3>Industrial Finishing</h3>
                     <p>Controlled finishing processes delivering precise textures, gloss levels, and aesthetic appearances without compromising performance.</p>
                     <div class="progress-group">
                         <div class="progress-label"><span>Aesthetic Control</span><span>94%</span></div>
                         <div class="progress-bar"><div class="progress-fill" data-width="94%"></div></div>
                     </div>
+                    <div class="progress-group">
+                        <div class="progress-label"><span>Gloss Uniformity</span><span>98%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" data-width="98%"></div></div>
+                    </div>
+                    <button class="service-card-cta-btn" style="margin-top: 1.5rem;" data-modal-target="quote-modal" data-preselect-system="Textures, Gloss & Custom Finishes">Request Finishing & Texturing Quote &rarr;</button>
                 </div>
             </div>
         </div>
@@ -191,15 +207,43 @@ TITANCOAT
                 <p class="header-desc">Engineered powder, liquid, and protective coating formulations tailored to specific environmental, thermal, and mechanical performance requirements.</p>
             </div>
 
+            <!-- Interactive Solution Selector Guide -->
+            <div class="coating-selector-wrapper fade-up">
+                <span class="coating-selector-title">Find Which Solution Suits Your Application:</span>
+                <div class="coating-selector-pills">
+                    <button class="selector-pill active" data-filter="all">All Solutions (6)</button>
+                    <button class="selector-pill" data-filter="uv-weather">UV & Outdoor Weathering</button>
+                    <button class="selector-pill" data-filter="corrosion-marine">Corrosion & Marine C5-M</button>
+                    <button class="selector-pill" data-filter="impact-dielectric">Impact, Wear & Dielectric</button>
+                    <button class="selector-pill" data-filter="high-heat">High Heat (Up to 1,200°F)</button>
+                    <button class="selector-pill" data-filter="ambient-liquid">Heat-Sensitive / Liquid</button>
+                    <button class="selector-pill" data-filter="architectural">Architectural & Aesthetics</button>
+                </div>
+                <div class="coating-recommendation-box" id="selector-recommendation-box">
+                    <div class="rec-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                    </div>
+                    <div class="rec-text" id="selector-rec-text">
+                        <strong>Browse All Coating Systems:</strong> Explore our 6 certified industrial formulations below, or click any performance requirement above to instantly highlight the recommended coating system for your operational needs.
+                    </div>
+                </div>
+            </div>
+
             <div class="coating-types-grid">
                 <!-- Card 1: Thermoset Powder -->
-                <div class="coating-card fade-up">
+                <div class="coating-card fade-up" data-match="uv-weather architectural corrosion-marine">
                     <div class="coating-card-header">
                         <span class="coating-tag">AAMA 2604 / 2605</span>
                     </div>
                     <h3>Thermoset Powder Coatings</h3>
                     <span class="coating-chemistries">Super-Durable Polyester TGIC • Pure Epoxy • Hybrids</span>
                     <p class="coating-summary">Electrostatic application forming an impermeable, cross-linked polymer shield. Delivers extraordinary UV stability, salt spray resistance, and color retention without VOC emissions.</p>
+                    
+                    <div class="coating-best-for">
+                        <span class="best-for-label">Best Suited For:</span>
+                        <p class="best-for-desc">Outdoor architectural extrusions, vehicle chassis, enclosures needing 10+ year UV stability & chalk resistance.</p>
+                    </div>
+
                     <div class="coating-specs-table">
                         <div class="coating-spec-row">
                             <span class="coating-spec-label">Film Thickness</span>
@@ -220,16 +264,23 @@ TITANCOAT
                         <span class="coating-part-pill">Vehicle Wheels & Chassis</span>
                         <span class="coating-part-pill">Electrical Housings</span>
                     </div>
+                    <button class="select-system-btn" data-modal-target="quote-modal" data-preselect-system="Thermoset Powder Coatings">Select System for Quote &rarr;</button>
                 </div>
 
                 <!-- Card 2: Thermoplastic Powder -->
-                <div class="coating-card fade-up" style="transition-delay: 0.1s;">
+                <div class="coating-card fade-up" style="transition-delay: 0.1s;" data-match="impact-dielectric corrosion-marine">
                     <div class="coating-card-header">
                         <span class="coating-tag">High Impact & Wear</span>
                     </div>
                     <h3>Thermoplastic Coatings</h3>
                     <span class="coating-chemistries">Nylon 11 & 12 • Polyethylene (PE) • PVC Plastisols</span>
                     <p class="coating-summary">Heavy-build protective polymer coatings applied via fluidized bed or specialized electrostatic spray. Provides extreme stone-chip absorption, dielectric insulation, and salt water immersion protection.</p>
+                    
+                    <div class="coating-best-for">
+                        <span class="best-for-label">Best Suited For:</span>
+                        <p class="best-for-desc">Heavy-vibration components, battery trays, subsea clamps, and wire assemblies needing stone-chip & electrical insulation.</p>
+                    </div>
+
                     <div class="coating-specs-table">
                         <div class="coating-spec-row">
                             <span class="coating-spec-label">Film Thickness</span>
@@ -250,16 +301,23 @@ TITANCOAT
                         <span class="coating-part-pill">Wire Goods & Baskets</span>
                         <span class="coating-part-pill">Subsea Clamps</span>
                     </div>
+                    <button class="select-system-btn" data-modal-target="quote-modal" data-preselect-system="Thermoplastic Coatings">Select System for Quote &rarr;</button>
                 </div>
 
                 <!-- Card 3: Wet / Liquid Protective -->
-                <div class="coating-card fade-up" style="transition-delay: 0.2s;">
+                <div class="coating-card fade-up" style="transition-delay: 0.2s;" data-match="ambient-liquid corrosion-marine">
                     <div class="coating-card-header">
                         <span class="coating-tag">Ambient & Heat Sensitive</span>
                     </div>
                     <h3>High-Performance Liquid Coatings</h3>
                     <span class="coating-chemistries">2K Aliphatic Polyurethane • High-Build Epoxy Enamel</span>
                     <p class="coating-summary">Specialized multi-component liquid systems for heat-sensitive assemblies, oversized structural weldments, or parts requiring on-site field touch-ups and maximum gloss retention.</p>
+                    
+                    <div class="coating-best-for">
+                        <span class="best-for-label">Best Suited For:</span>
+                        <p class="best-for-desc">Assembled hydraulic systems, temperature-sensitive electronics, crane booms, and machinery unable to tolerate high-temp ovens.</p>
+                    </div>
+
                     <div class="coating-specs-table">
                         <div class="coating-spec-row">
                             <span class="coating-spec-label">Film Thickness</span>
@@ -280,16 +338,23 @@ TITANCOAT
                         <span class="coating-part-pill">Crane Booms</span>
                         <span class="coating-part-pill">Transformers & Tanks</span>
                     </div>
+                    <button class="select-system-btn" data-modal-target="quote-modal" data-preselect-system="High-Performance Liquid Coatings">Select System for Quote &rarr;</button>
                 </div>
 
                 <!-- Card 4: Zinc-Rich Primers -->
-                <div class="coating-card fade-up">
+                <div class="coating-card fade-up" data-match="corrosion-marine uv-weather">
                     <div class="coating-card-header">
                         <span class="coating-tag">Cathodic Protection</span>
                     </div>
                     <h3>Zinc-Rich Primers & Barriers</h3>
                     <span class="coating-chemistries">Zinc Epoxy Powders • Inorganic Zinc Silicates</span>
                     <p class="coating-summary">Formulated with up to 90% zinc dust in the dry film to deliver active galvanic protection. Even if the outer coat is scratched down to bare metal, the zinc sacrificially corrodes to stop rust spread.</p>
+                    
+                    <div class="coating-best-for">
+                        <span class="best-for-label">Best Suited For:</span>
+                        <p class="best-for-desc">Structural bridge steel, offshore splash zones, highway infrastructure, and severe coastal salt environments (ISO 12944 C5-M).</p>
+                    </div>
+
                     <div class="coating-specs-table">
                         <div class="coating-spec-row">
                             <span class="coating-spec-label">Zinc Loading</span>
@@ -310,16 +375,23 @@ TITANCOAT
                         <span class="coating-part-pill">Highway Bridge Steel</span>
                         <span class="coating-part-pill">Trailer Chassis</span>
                     </div>
+                    <button class="select-system-btn" data-modal-target="quote-modal" data-preselect-system="Zinc-Rich Primers & Barriers">Select System for Quote &rarr;</button>
                 </div>
 
                 <!-- Card 5: Specialty & High Temp -->
-                <div class="coating-card fade-up" style="transition-delay: 0.1s;">
+                <div class="coating-card fade-up" style="transition-delay: 0.1s;" data-match="high-heat corrosion-marine">
                     <div class="coating-card-header">
                         <span class="coating-tag">Extreme Thermal & Chem</span>
                     </div>
                     <h3>Specialty & Extreme Environment</h3>
                     <span class="coating-chemistries">Ceramic Silicones • Fluoropolymers (PTFE/FEP) • Phenolics</span>
                     <p class="coating-summary">Formulated for demanding extreme temperatures up to 1,200°F (650°C), non-stick low-friction applications, and hostile petrochemical immersion where conventional coatings fail.</p>
+                    
+                    <div class="coating-best-for">
+                        <span class="best-for-label">Best Suited For:</span>
+                        <p class="best-for-desc">Exhaust headers, turbo housings, boiler piping, pump impellers, and petrochemical valves subjected to intense thermal cycling.</p>
+                    </div>
+
                     <div class="coating-specs-table">
                         <div class="coating-spec-row">
                             <span class="coating-spec-label">Thermal Limits</span>
@@ -340,16 +412,23 @@ TITANCOAT
                         <span class="coating-part-pill">Process Valves</span>
                         <span class="coating-part-pill">Pump Impellers</span>
                     </div>
+                    <button class="select-system-btn" data-modal-target="quote-modal" data-preselect-system="Specialty & Extreme Environment Coatings">Select System for Quote &rarr;</button>
                 </div>
 
                 <!-- Card 6: Functional Textures & Finishes -->
-                <div class="coating-card fade-up" style="transition-delay: 0.2s;">
+                <div class="coating-card fade-up" style="transition-delay: 0.2s;" data-match="architectural uv-weather">
                     <div class="coating-card-header">
                         <span class="coating-tag">Appearance & Texture</span>
                     </div>
                     <h3>Textures, Gloss & Custom Finishes</h3>
                     <span class="coating-chemistries">Fine Texture • Wrinkle • Hammer-Tone • Metallics</span>
                     <p class="coating-summary">Engineered visual and tactile finishes designed to mask casting imperfections, reduce surface glare, improve mechanical grip, and match exact brand colors across RAL and Pantone libraries.</p>
+                    
+                    <div class="coating-best-for">
+                        <span class="best-for-label">Best Suited For:</span>
+                        <p class="best-for-desc">Commercial storefronts, branded consoles, audio equipment, ergonomic grips, and sheet metal products requiring fingerprint defense.</p>
+                    </div>
+
                     <div class="coating-specs-table">
                         <div class="coating-spec-row">
                             <span class="coating-spec-label">Gloss Options</span>
@@ -370,6 +449,7 @@ TITANCOAT
                         <span class="coating-part-pill">Medical Housings</span>
                         <span class="coating-part-pill">Commercial Displays</span>
                     </div>
+                    <button class="select-system-btn" data-modal-target="quote-modal" data-preselect-system="Textures, Gloss & Custom Finishes">Select System for Quote &rarr;</button>
                 </div>
             </div>
         </div>
@@ -563,11 +643,12 @@ TITANCOAT
     </section>
 
     <!-- SECTION 03: THE COATING PROCESS -->
-    <section class="process-section">
+    <section class="process-section" id="coating-process">
         <div class="container">
             <div class="fade-up text-center">
-                <span class="label-small">Workflow</span>
-                <h2>Precision at Every Step.</h2>
+                <span class="label-small">Certified 6-Stage Workflow</span>
+                <h2>How the Coating Process Works</h2>
+                <p class="header-desc" style="max-width: 720px; margin: 0.75rem auto 0 auto; color: var(--text-secondary); font-size: 1.05rem;">From initial alloy verification to final ASTM cross-hatch testing, every component follows a tightly calibrated, ISO-compliant processing cycle.</p>
             </div>
             
             <div class="timeline-container fade-up" id="timeline-container">
@@ -577,27 +658,114 @@ TITANCOAT
                 
                 <div class="timeline-step">
                     <div class="step-number">01</div>
-                    <div class="step-title">Inspect</div>
+                    <div class="step-title">Intake & Inspection</div>
                 </div>
                 <div class="timeline-step">
                     <div class="step-number">02</div>
-                    <div class="step-title">Prepare</div>
+                    <div class="step-title">Prep & Blasting</div>
                 </div>
                 <div class="timeline-step">
                     <div class="step-number">03</div>
-                    <div class="step-title">Coat</div>
+                    <div class="step-title">Precision Masking</div>
                 </div>
                 <div class="timeline-step">
                     <div class="step-number">04</div>
-                    <div class="step-title">Cure</div>
+                    <div class="step-title">Coating Spray</div>
                 </div>
                 <div class="timeline-step">
                     <div class="step-number">05</div>
-                    <div class="step-title">Inspect</div>
+                    <div class="step-title">Thermal Curing</div>
                 </div>
                 <div class="timeline-step">
                     <div class="step-number">06</div>
-                    <div class="step-title">Release</div>
+                    <div class="step-title">QC & Dispatch</div>
+                </div>
+            </div>
+
+            <!-- Synchronized Process Detail Cards -->
+            <div class="process-cards-grid fade-up">
+                <!-- Step 1 -->
+                <div class="process-card">
+                    <div class="process-card-header">
+                        <span class="proc-step-badge">Stage 01</span>
+                        <span class="proc-step-num">01</span>
+                    </div>
+                    <h4>Intake & Substrate Inspection</h4>
+                    <p>Incoming parts undergo dimensional checks, alloy validation, baseline surface mapping, and solvent wash testing to detect cutting oils, lubricants, or mill scale.</p>
+                    <div class="proc-qa-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span><strong>Standard:</strong> Alloy Verification & Tolerance Audit</span>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-card">
+                    <div class="process-card-header">
+                        <span class="proc-step-badge">Stage 02</span>
+                        <span class="proc-step-num">02</span>
+                    </div>
+                    <h4>Surface Prep & Abrasive Blasting</h4>
+                    <p>Multi-stage chemical degreasing followed by automated or manual garnet/grit blasting to achieve an SSPC-SP 10 / NACE No. 2 near-white metal anchor profile (1.5–2.5 mils).</p>
+                    <div class="proc-qa-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span><strong>Standard:</strong> SSPC-SP 10 / NACE 2 Anchor Profile</span>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-card">
+                    <div class="process-card-header">
+                        <span class="proc-step-badge">Stage 03</span>
+                        <span class="proc-step-num">03</span>
+                    </div>
+                    <h4>Precision Masking & Fixturing</h4>
+                    <p>High-temp silicone tapered plugs, Kapton tape, and custom magnetic shields protect precision internal threads, ground tabs, and mating faces from overspray.</p>
+                    <div class="proc-qa-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span><strong>Standard:</strong> Zero Overspray on Critical Tolerances</span>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="process-card">
+                    <div class="process-card-header">
+                        <span class="proc-step-badge">Stage 04</span>
+                        <span class="proc-step-num">04</span>
+                    </div>
+                    <h4>Electrostatic Coating Application</h4>
+                    <p>Automated reciprocal spray booths and certified manual applicators deliver an ultra-uniform electrostatic powder cloud with fluid Faraday-cage corner penetration.</p>
+                    <div class="proc-qa-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span><strong>Standard:</strong> ±0.5 Mil Uniform DFT Control</span>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="process-card">
+                    <div class="process-card-header">
+                        <span class="proc-step-badge">Stage 05</span>
+                        <span class="proc-step-num">05</span>
+                    </div>
+                    <h4>Thermal Curing & Polymerization</h4>
+                    <p>Monitored convection curing ovens hold precise part-metal temperatures (375°F–400°F for 10–15 min) ensuring complete molecular cross-linking and chemical toughness.</p>
+                    <div class="proc-qa-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span><strong>Standard:</strong> Convection Oven Data-Logged Profiles</span>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="process-card">
+                    <div class="process-card-header">
+                        <span class="proc-step-badge">Stage 06</span>
+                        <span class="proc-step-num">06</span>
+                    </div>
+                    <h4>Final QC, ASTM Testing & Dispatch</h4>
+                    <p>100% inspection including digital dry-film thickness (DFT) gauging, ASTM D3359 cross-hatch adhesion checks, gloss verification, and protective export foam packaging.</p>
+                    <div class="proc-qa-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span><strong>Standard:</strong> ASTM D3359 & DFT Verified Release</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -863,9 +1031,9 @@ TITANCOAT
                 <div class="capacity-grid">
                     <div class="capacity-stat-card">
                         <div class="capacity-stat-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
                         </div>
-                        <div>
+                        <div class="capacity-stat-info">
                             <span class="capacity-stat-label">Maximum Dimensions</span>
                             <div class="capacity-stat-val">25' L × 8' W × 8' H</div>
                             <p class="capacity-stat-desc">Oven envelope capable of curing oversized structural beams & frames.</p>
@@ -874,9 +1042,9 @@ TITANCOAT
 
                     <div class="capacity-stat-card">
                         <div class="capacity-stat-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3h16"></path><line x1="12" y1="3" x2="12" y2="7"></line><rect x="8.5" y="7" width="7" height="5" rx="1.5"></rect><path d="M12 12v3.5a3 3 0 0 0 6 0c0-1.8-1.2-3-3-3"></path></svg>
                         </div>
-                        <div>
+                        <div class="capacity-stat-info">
                             <span class="capacity-stat-label">Crane & Line Weight</span>
                             <div class="capacity-stat-val">Up to 5,000 lbs</div>
                             <p class="capacity-stat-desc">Heavy-duty overhead hoists & reinforced conveyor rail system.</p>
@@ -885,9 +1053,9 @@ TITANCOAT
 
                     <div class="capacity-stat-card">
                         <div class="capacity-stat-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16z"></path><path d="M18 18h-1"></path><path d="M13 18h-1"></path><path d="M8 18H7"></path></svg>
                         </div>
-                        <div>
+                        <div class="capacity-stat-info">
                             <span class="capacity-stat-label">Production Flexibility</span>
                             <div class="capacity-stat-val">Prototypes to High Run</div>
                             <p class="capacity-stat-desc">Dedicated automated lines for volume + manual booth for prototypes.</p>
@@ -896,9 +1064,9 @@ TITANCOAT
 
                     <div class="capacity-stat-card">
                         <div class="capacity-stat-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="10" y1="2" x2="14" y2="2"></line><line x1="12" y1="14" x2="15" y2="11"></line><circle cx="12" cy="14" r="8"></circle></svg>
                         </div>
-                        <div>
+                        <div class="capacity-stat-info">
                             <span class="capacity-stat-label">Standard Turnaround</span>
                             <div class="capacity-stat-val">3 – 5 Days</div>
                             <p class="capacity-stat-desc">Expedited 24–48 hr emergency turnaround available upon request.</p>
@@ -909,13 +1077,114 @@ TITANCOAT
         </div>
     </section>
 
-    <!-- SECTION 06: FINAL CTA -->
-    <section class="cta-section">
-        <div class="container relative">
-            <div class="cta-content fade-up">
-                <h2>Give Your Surface a Better Defense.</h2>
-                <p class="text-lead">Tell us about your component, environment and performance requirements. We'll help identify the right coating approach.</p>
-                <button class="btn btn-outline" data-modal-target="quote-modal" style="margin-top: 1rem; color: #fff; border-color: #fff;">Request a Coating Quote</button>
+    <!-- SECTION 06: HOW TO REQUEST A QUOTE OR CONSULTATION -->
+    <section class="quote-consultation-section" id="request-quote-guide">
+        <div class="container">
+            <div class="section-header-block text-center fade-up">
+                <span class="label-small">Streamlined Onboarding & Rapid Response</span>
+                <h2>How to Request a Quote or Consultation</h2>
+                <p class="header-desc" style="max-width: 760px; margin: 0.75rem auto 0 auto; color: var(--text-secondary); font-size: 1.05rem;">Whether you need an itemized production quote within 24–48 hours or a technical engineering consultation to define ASTM / MIL-spec requirements, our team ensures a fast, friction-free onboarding journey.</p>
+            </div>
+
+            <!-- 3-Step Simple Onboarding Workflow -->
+            <div class="quote-steps-flow fade-up">
+                <div class="quote-step-item">
+                    <div class="quote-step-icon-wrap">01</div>
+                    <div class="quote-step-content">
+                        <h4>1. Prepare Part Specifications</h4>
+                        <p>Have your component dimensions (L × W × H, weight), substrate alloy, estimated batch quantities, and 2D/3D drawings (.STEP, .DWG, PDF) or photos ready.</p>
+                    </div>
+                </div>
+
+                <div class="quote-step-item">
+                    <div class="quote-step-icon-wrap">02</div>
+                    <div class="quote-step-content">
+                        <h4>2. Select Your Service Channel</h4>
+                        <p>Choose between Fast Production Quoting (24–48 hr guaranteed response) or Book an Engineering Consultation for custom chemistries and spec compliance.</p>
+                    </div>
+                </div>
+
+                <div class="quote-step-item">
+                    <div class="quote-step-icon-wrap">03</div>
+                    <div class="quote-step-content">
+                        <h4>3. Receive Proposal & Schedule Run</h4>
+                        <p>Get a transparent, itemized cost proposal, coating system spec sheet, guaranteed turnaround window (3–5 days standard), and optional test coupons.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dual Pathway Cards -->
+            <div class="quote-paths-grid fade-up">
+                <!-- Pathway 1: Production Quote (RFQ) -->
+                <div class="quote-path-card featured">
+                    <span class="path-badge badge-rfq">Fast 24–48 Hr Response</span>
+                    <h3>Request a Production Coating Quote</h3>
+                    <p class="quote-path-desc">Best for fabricators, OEMs, and contractors with clear part drawings, specified colors, and defined batch volumes ready for manufacturing.</p>
+                    <ul class="quote-features-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Itemized per-piece and volume-tiered batch pricing</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Pre-treatment, abrasive blast, and custom masking cost breakdown</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Standard 3–5 day turnaround commitment with 24–48 hr expedite option</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Dedicated commercial account manager & dock-to-dock logistics support</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary" data-modal-target="quote-modal" data-form-mode="quote" style="width: 100%; justify-content: center;">
+                        Request a Coating Quote (RFQ) &rarr;
+                    </button>
+                </div>
+
+                <!-- Pathway 2: Technical Engineering Consultation -->
+                <div class="quote-path-card">
+                    <span class="path-badge badge-consult">1-on-1 Specialist Guidance</span>
+                    <h3>Schedule an Engineering Consultation</h3>
+                    <p class="quote-path-desc">Best for engineers developing new hardware, solving premature coating failures, or matching demanding ASTM, AAMA, or Military specifications.</p>
+                    <ul class="quote-features-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Direct technical discussion with a Senior Coating Materials Engineer</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Substrate alloy compatibility, anchor profile, and conversion coating review</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Salt-spray (ASTM B117), chemical exposure & UV longevity recommendations</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Pre-production sample test panels and coating adhesion verification coupons</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-outline" data-modal-target="quote-modal" data-form-mode="consultation" style="width: 100%; justify-content: center;">
+                        Book Technical Consultation &rarr;
+                    </button>
+                </div>
+            </div>
+
+            <!-- Fast Quote Checklist Bar -->
+            <div class="quote-checklist-bar fade-up">
+                <div class="checklist-title-wrap">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    <h4 class="checklist-title">Fast RFQ Checklist (Have Ready for Quick Turnaround):</h4>
+                </div>
+                <div class="checklist-items">
+                    <span class="check-pill">1. Part Dimensions & Weight</span>
+                    <span class="check-pill">2. Substrate Alloy (e.g. 6061, Steel, Cast Iron)</span>
+                    <span class="check-pill">3. Estimated Batch Quantity</span>
+                    <span class="check-pill">4. Target Color & Finish (RAL / Gloss)</span>
+                    <span class="check-pill">5. 2D PDF / 3D CAD (.STEP / .DWG)</span>
+                </div>
             </div>
         </div>
     </section>
@@ -978,61 +1247,116 @@ TITANCOAT
         </div>
     </footer>
 
-        <!-- MODAL: QUOTE REQUEST -->
+    <!-- MODAL: QUOTE & CONSULTATION REQUEST -->
     <div class="modal-overlay" id="quote-modal">
         <div class="modal-card">
             <button class="modal-close">&times;</button>
             <div class="modal-header">
-                <h3>Request a Coating Quote</h3>
-                <p>Provide your project details for an engineering evaluation.</p>
+                <h3 id="modal-heading">Request a Coating Quote</h3>
+                <p id="modal-subheading">Provide your project details for an itemized engineering evaluation.</p>
             </div>
-            <form onsubmit="event.preventDefault(); alert('Quote Request Submitted! (Demo)'); this.closest('.modal-overlay').classList.remove('active'); document.body.style.overflow = '';">
+
+            <!-- Tab Switcher between Quote (RFQ) and Technical Consultation -->
+            <div class="modal-tab-nav">
+                <button type="button" class="modal-tab-btn active" id="modal-tab-rfq" onclick="switchModalMode('quote')">Production Quote (RFQ)</button>
+                <button type="button" class="modal-tab-btn" id="modal-tab-consult" onclick="switchModalMode('consultation')">Engineering Consultation</button>
+            </div>
+
+            <!-- FORM 1: PRODUCTION QUOTE (RFQ) -->
+            <form id="rfq-form" onsubmit="event.preventDefault(); alert('Quote Request Submitted! Our engineering team will review your specifications and reply within 24–48 hours.'); this.closest('.modal-overlay').classList.remove('active'); document.body.style.overflow = '';">
                 <div class="form-grid">
                     <div class="form-group">
-                        <label class="form-label">Project Type</label>
-                        <select class="form-control" required>
+                        <label class="form-label">Coating System / Process</label>
+                        <select class="form-control" id="quote-project-type" required>
                             <option value="">Select process...</option>
-                            <option>Powder Coating</option>
-                            <option>Sandblasting</option>
-                            <option>Protective Coating</option>
-                            <option>Metal Finishing</option>
-                            <option>Custom Coating</option>
+                            <option value="Thermoset Powder Coatings">Thermoset Powder Coating (AAMA 2604/2605)</option>
+                            <option value="Thermoplastic Coatings">Thermoplastic Coating (Nylon / PE)</option>
+                            <option value="High-Performance Liquid Coatings">High-Performance Liquid / 2K Polyurethane</option>
+                            <option value="Zinc-Rich Primers & Barriers">Zinc-Rich Epoxy Primer (C5-M Marine)</option>
+                            <option value="Specialty & Extreme Environment Coatings">High-Temp Ceramic & Silicone (Up to 1,200°F)</option>
+                            <option value="Textures, Gloss & Custom Finishes">Architectural Textures & Custom RAL</option>
+                            <option value="Sandblasting & Surface Prep">Abrasive Sandblasting Prep Only</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Material</label>
+                        <label class="form-label">Substrate Material</label>
                         <select class="form-control" required>
                             <option value="">Select substrate...</option>
-                            <option>Steel</option>
-                            <option>Aluminum</option>
-                            <option>Stainless Steel</option>
-                            <option>Cast Iron</option>
-                            <option>Other</option>
+                            <option>Structural / Carbon Steel</option>
+                            <option>Aluminum (Extrusions / Sheet)</option>
+                            <option>Stainless Steel (304 / 316)</option>
+                            <option>Cast Iron / Ductile Iron</option>
+                            <option>Galvanized Steel</option>
+                            <option>Brass / Copper / Yellow Metals</option>
+                            <option>Other / Composite</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-grid">
                     <div class="form-group">
                         <label class="form-label">Estimated Quantity</label>
-                        <input type="number" class="form-control" placeholder="Number of parts" required>
+                        <input type="number" class="form-control" placeholder="Number of parts / batch" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Required Finish</label>
+                        <label class="form-label">Required Finish / Spec</label>
                         <select class="form-control" required>
                             <option value="">Select finish...</option>
-                            <option>Matte</option>
-                            <option>Satin</option>
-                            <option>Gloss</option>
-                            <option>Textured</option>
-                            <option>Metallic</option>
+                            <option>Matte (5% - 20% Gloss)</option>
+                            <option>Satin (30% - 50% Gloss)</option>
+                            <option>High Gloss (80%+ Gloss)</option>
+                            <option>Fine Textured / Wrinkle</option>
+                            <option>Metallic / Sparkle</option>
+                            <option>Custom RAL Color Match</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Project Message / Dimensions</label>
-                    <textarea class="form-control" placeholder="Describe component dimensions, surface condition, and performance needs..." required></textarea>
+                    <label class="form-label">Part Dimensions, Masking Zones & Service Environment</label>
+                    <textarea class="form-control" placeholder="Describe length x width x height, estimated part weight, critical threads/bores to mask, and outdoor/chemical exposure needs..." required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">SUBMIT QUOTE REQUEST</button>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">SUBMIT PRODUCTION RFQ (24-48 HR RESPONSE)</button>
+            </form>
+
+            <!-- FORM 2: TECHNICAL CONSULTATION -->
+            <form id="consult-form" style="display: none;" onsubmit="event.preventDefault(); alert('Consultation Request Received! A Senior Coating Materials Engineer will contact you within 1 business day.'); this.closest('.modal-overlay').classList.remove('active'); document.body.style.overflow = '';">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">Consultation Focus</label>
+                        <select class="form-control" required>
+                            <option value="">Select engineering challenge...</option>
+                            <option>Coating System Selection for New Product</option>
+                            <option>Premature Coating Failure Troubleshooting</option>
+                            <option>Specification Compliance (ASTM, AAMA, MIL-SPEC)</option>
+                            <option>Harsh Environment / Salt Spray / Chemical Defense</option>
+                            <option>Substrate Pre-Treatment & Blast Profiling</option>
+                            <option>Custom Formulation or Test Coupon Sampling</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Preferred Discussion Format</label>
+                        <select class="form-control" required>
+                            <option value="Phone Call">Direct Engineering Phone Call</option>
+                            <option value="Virtual Video Meeting">Virtual Video Conference (Screen Share)</option>
+                            <option value="Email Technical Brief">Email Technical Evaluation Brief</option>
+                            <option value="Facility Visit">Facility & Lab Visit (On-Site)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">Company / Organization</label>
+                        <input type="text" class="form-control" placeholder="Company or project name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Contact Email or Direct Phone</label>
+                        <input type="text" class="form-control" placeholder="Email or direct line" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Technical Challenge / Operating Environment Details</label>
+                    <textarea class="form-control" placeholder="Describe temperatures, chemical exposure, substrate alloy, failure history, or required ASTM specifications..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">SCHEDULE 1-ON-1 TECHNICAL CONSULTATION</button>
             </form>
         </div>
     </div>
@@ -1176,7 +1500,99 @@ TITANCOAT
                     });
                 });
             }
+
+            // Coating Solution Selector & Filter Logic
+            const selectorPills = document.querySelectorAll('.selector-pill');
+            const coatingCards = document.querySelectorAll('.coating-types-grid .coating-card');
+            const recText = document.getElementById('selector-rec-text');
+
+            const recommendationMessages = {
+                'all': '<strong>Browse All Coating Systems:</strong> Explore our 6 certified industrial formulations below, or click any performance requirement above to instantly highlight the recommended coating system for your operational needs.',
+                'uv-weather': '<strong>Recommended for UV & Outdoor Weathering:</strong> Thermoset Powder Coatings (AAMA 2604/2605) and Zinc-Rich Barrier Systems deliver 10+ year gloss retention, chalk defense, and extreme sun/rain protection without degradation.',
+                'corrosion-marine': '<strong>Recommended for Severe Corrosion & Marine C5-M:</strong> Zinc-Rich Epoxy Primers paired with Fluoropolymer or Thermoset Topcoats provide sacrificial cathodic defense against continuous saltwater splash and 3,000–5,000 hr ASTM B117 salt spray.',
+                'impact-dielectric': '<strong>Recommended for Impact, Wear & Dielectric Shield:</strong> Thermoplastic Coatings (Nylon 11/12 & Heavy-Build PE) provide a resilient polymer cushion resisting stone-chip impingement, electrical current, and heavy mechanical vibration.',
+                'high-heat': '<strong>Recommended for Extreme Heat up to 1,200°F (650°C):</strong> Ceramic Silicones & Specialty Polymers are formulated for exhaust manifolds, turbo housings, boiler piping, and hostile thermal cycling where standard coatings burn off.',
+                'ambient-liquid': '<strong>Recommended for Heat-Sensitive & Large Assembled Units:</strong> High-Performance 2K Liquid Polyurethanes & Epoxies cure at ambient temperature, making them ideal for parts with sensitive seals, hydraulics, or massive weldments.',
+                'architectural': '<strong>Recommended for Architectural & Brand Aesthetics:</strong> AAMA 2605 Thermoset Powders & Custom Textures provide 6,000+ RAL colors, fine wrinkles, metallic flakes, and matte-to-high-gloss tactile finishes.'
+            };
+
+            selectorPills.forEach(pill => {
+                pill.addEventListener('click', () => {
+                    selectorPills.forEach(p => p.classList.remove('active'));
+                    pill.classList.add('active');
+
+                    const filter = pill.getAttribute('data-filter');
+                    if (recText && recommendationMessages[filter]) {
+                        recText.innerHTML = recommendationMessages[filter];
+                    }
+
+                    coatingCards.forEach(card => {
+                        const matchString = card.getAttribute('data-match') || '';
+                        if (filter === 'all') {
+                            card.classList.remove('recommended-match', 'dimmed-card');
+                        } else if (matchString.includes(filter)) {
+                            card.classList.add('recommended-match');
+                            card.classList.remove('dimmed-card');
+                        } else {
+                            card.classList.remove('recommended-match');
+                            card.classList.add('dimmed-card');
+                        }
+                    });
+                });
+            });
+
+            // Pre-select coating system in quote modal
+            const selectSystemBtns = document.querySelectorAll('[data-preselect-system]');
+            selectSystemBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const systemName = btn.getAttribute('data-preselect-system');
+                    const selectElem = document.getElementById('quote-project-type');
+                    if (selectElem && systemName) {
+                        selectElem.value = systemName;
+                    }
+                    if (window.switchModalMode) {
+                        window.switchModalMode('quote');
+                    }
+                });
+            });
+
+            // Handle [data-form-mode] buttons (Quote vs Consultation)
+            const modeBtns = document.querySelectorAll('[data-form-mode]');
+            modeBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const mode = btn.getAttribute('data-form-mode');
+                    if (window.switchModalMode) {
+                        window.switchModalMode(mode);
+                    }
+                });
+            });
         });
+
+        // Global Modal Mode Switcher (Quote RFQ vs Technical Consultation)
+        function switchModalMode(mode) {
+            const heading = document.getElementById('modal-heading');
+            const subheading = document.getElementById('modal-subheading');
+            const rfqTab = document.getElementById('modal-tab-rfq');
+            const consultTab = document.getElementById('modal-tab-consult');
+            const rfqForm = document.getElementById('rfq-form');
+            const consultForm = document.getElementById('consult-form');
+
+            if (mode === 'consultation') {
+                if (consultTab) consultTab.classList.add('active');
+                if (rfqTab) rfqTab.classList.remove('active');
+                if (consultForm) consultForm.style.display = 'block';
+                if (rfqForm) rfqForm.style.display = 'none';
+                if (heading) heading.innerText = 'Schedule Technical Consultation';
+                if (subheading) subheading.innerText = 'Connect 1-on-1 with a Senior Coating Materials Engineer to discuss your specifications.';
+            } else {
+                if (rfqTab) rfqTab.classList.add('active');
+                if (consultTab) consultTab.classList.remove('active');
+                if (rfqForm) rfqForm.style.display = 'block';
+                if (consultForm) consultForm.style.display = 'none';
+                if (heading) heading.innerText = 'Request a Coating Quote';
+                if (subheading) subheading.innerText = 'Provide your project details for an itemized engineering evaluation.';
+            }
+        }
     </script>
 </body>
 </html>

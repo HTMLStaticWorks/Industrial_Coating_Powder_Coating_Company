@@ -104,6 +104,7 @@ TITANCOAT
                 <div class="selector-content-area">
                     <!-- Steel -->
                     <div class="selector-panel active" id="mat-steel">
+                        <span class="req-match-pill">Substrate Solution: SP-10 Blast + Zinc-Rich Primer</span>
                         <h3>Carbon Steel Processing</h3>
                         <p>Steel is highly susceptible to rapid oxidation (flash rusting) when exposed to moisture. Proper coating requires complete removal of mill scale and immediate application of a zinc-rich primer.</p>
                         <div class="considerations-grid">
@@ -116,10 +117,12 @@ TITANCOAT
                                 <p>Two-coat system recommended: Epoxy primer for corrosion resistance followed by a polyester topcoat for UV stability.</p>
                             </div>
                         </div>
+                        <button class="service-card-cta-btn primary" style="margin-top: 1.5rem; max-width: 340px;" data-modal-target="quote-modal" data-preselect-substrate="Structural / Carbon Steel" data-preselect-system="Zinc-Rich Primers & Barriers">Get Quote for Carbon Steel Coating &rarr;</button>
                     </div>
 
                     <!-- Aluminum -->
                     <div class="selector-panel" id="mat-alum">
+                        <span class="req-match-pill">Substrate Solution: Non-Chrome Zirconium Pre-Wash</span>
                         <h3>Aluminum Processing</h3>
                         <p>Aluminum forms a natural oxide layer that can interfere with coating adhesion. It requires specific chemical conversion processes rather than aggressive mechanical blasting.</p>
                         <div class="considerations-grid">
@@ -132,10 +135,12 @@ TITANCOAT
                                 <p>Single-coat architectural polyester is often sufficient, providing excellent adhesion and weatherability.</p>
                             </div>
                         </div>
+                        <button class="service-card-cta-btn primary" style="margin-top: 1.5rem; max-width: 340px;" data-modal-target="quote-modal" data-preselect-substrate="Aluminum (Extrusions / Sheet)" data-preselect-system="Thermoset Powder Coatings">Get Quote for Aluminum Coating &rarr;</button>
                     </div>
 
                     <!-- Cast Iron -->
                     <div class="selector-panel" id="mat-cast">
+                        <span class="req-match-pill">Substrate Solution: High-Temp Pre-Bake + OGF Primer</span>
                         <h3>Cast Iron Processing</h3>
                         <p>Cast iron is extremely porous and holds trapped gases that can cause "outgassing" (bubbles/pinholes) during the thermal curing process.</p>
                         <div class="considerations-grid">
@@ -148,10 +153,12 @@ TITANCOAT
                                 <p>Specialized OGF (Outgas Forgiving) primers or powder formulations are necessary to bridge pores smoothly.</p>
                             </div>
                         </div>
+                        <button class="service-card-cta-btn primary" style="margin-top: 1.5rem; max-width: 340px;" data-modal-target="quote-modal" data-preselect-substrate="Cast Iron / Ductile Iron" data-preselect-system="Thermoset Powder Coatings">Get Quote for Cast Iron Coating &rarr;</button>
                     </div>
 
                     <!-- Galvanized -->
                     <div class="selector-panel" id="mat-galv">
+                        <span class="req-match-pill">Substrate Solution: SP-7 Brush Blast + Duplex Protection</span>
                         <h3>Galvanized Steel Processing</h3>
                         <p>Galvanized (zinc-coated) steel presents adhesion challenges due to passivators applied at the mill and the smoothness of the zinc layer.</p>
                         <div class="considerations-grid">
@@ -164,6 +171,7 @@ TITANCOAT
                                 <p>Requires outgas-forgiving powders to prevent bubbling from the porous zinc layer during curing.</p>
                             </div>
                         </div>
+                        <button class="service-card-cta-btn primary" style="margin-top: 1.5rem; max-width: 340px;" data-modal-target="quote-modal" data-preselect-substrate="Galvanized Steel" data-preselect-system="Thermoset Powder Coatings">Get Quote for Galvanized Coating &rarr;</button>
                     </div>
                 </div>
             </div>
@@ -225,10 +233,13 @@ TITANCOAT
 
     <!-- SECTION 04: COLOR CTA -->
     <section class="color-cta">
-        <div class="container fade-up">
-            <h2>Have a Custom Color Requirement?</h2>
-            <p class="text-lead">Provide us with a physical sample or RAL/Pantone code, and our lab will formulate a custom match.</p>
-            <button class="btn btn-primary" style="margin-top: 1.5rem;" data-modal-target="quote-modal">Request Color Match</button>
+        <div class="container fade-up text-center">
+            <h2>Have a Custom Color or Substrate Requirement?</h2>
+            <p class="text-lead" style="max-width: 680px; margin: 0 auto;">Provide us with a physical sample, RAL/Pantone code, or component alloy, and our lab will formulate a custom match with guaranteed adhesion and UV stability.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                <button class="btn btn-primary" data-modal-target="quote-modal" data-form-mode="quote" data-preselect-system="Textures, Gloss & Custom Finishes">Request Color & Finish Quote &rarr;</button>
+                <button class="btn btn-outline" style="border-color: var(--accent-orange); color: var(--accent-orange);" data-modal-target="quote-modal" data-form-mode="consultation">Consult Coating Chemist &rarr;</button>
+            </div>
         </div>
     </section>
 
@@ -290,61 +301,116 @@ TITANCOAT
         </div>
     </footer>
 
-        <!-- MODAL: QUOTE REQUEST -->
+    <!-- MODAL: QUOTE & CONSULTATION REQUEST -->
     <div class="modal-overlay" id="quote-modal">
         <div class="modal-card">
             <button class="modal-close">&times;</button>
             <div class="modal-header">
-                <h3>Request a Coating Quote</h3>
-                <p>Provide your project details for an engineering evaluation.</p>
+                <h3 id="modal-heading">Request a Coating Quote</h3>
+                <p id="modal-subheading">Provide your project details for an itemized engineering evaluation.</p>
             </div>
-            <form onsubmit="event.preventDefault(); alert('Quote Request Submitted! (Demo)'); this.closest('.modal-overlay').classList.remove('active'); document.body.style.overflow = '';">
+
+            <!-- Tab Switcher between Quote (RFQ) and Technical Consultation -->
+            <div class="modal-tab-nav">
+                <button type="button" class="modal-tab-btn active" id="modal-tab-rfq">Production Quote (RFQ)</button>
+                <button type="button" class="modal-tab-btn" id="modal-tab-consult">Engineering Consultation</button>
+            </div>
+
+            <!-- FORM 1: PRODUCTION QUOTE (RFQ) -->
+            <form id="rfq-form" onsubmit="event.preventDefault(); alert('Quote Request Submitted! Our engineering team will review your specifications and reply within 24–48 hours.'); this.closest('.modal-overlay').classList.remove('active'); document.body.style.overflow = '';">
                 <div class="form-grid">
                     <div class="form-group">
-                        <label class="form-label">Project Type</label>
-                        <select class="form-control" required>
+                        <label class="form-label">Coating System / Process</label>
+                        <select class="form-control" id="quote-project-type" required>
                             <option value="">Select process...</option>
-                            <option>Powder Coating</option>
-                            <option>Sandblasting</option>
-                            <option>Protective Coating</option>
-                            <option>Metal Finishing</option>
-                            <option>Custom Coating</option>
+                            <option value="Thermoset Powder Coatings">Thermoset Powder Coating (AAMA 2604/2605)</option>
+                            <option value="Thermoplastic Coatings">Thermoplastic Coating (Nylon / PE)</option>
+                            <option value="High-Performance Liquid Coatings">High-Performance Liquid / 2K Polyurethane</option>
+                            <option value="Zinc-Rich Primers & Barriers">Zinc-Rich Epoxy Primer (C5-M Marine)</option>
+                            <option value="Specialty & Extreme Environment Coatings">High-Temp Ceramic & Silicone (Up to 1,200°F)</option>
+                            <option value="Textures, Gloss & Custom Finishes">Architectural Textures & Custom RAL</option>
+                            <option value="Sandblasting & Surface Prep">Abrasive Sandblasting Prep Only</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Material</label>
-                        <select class="form-control" required>
+                        <label class="form-label">Substrate Material</label>
+                        <select class="form-control" id="quote-substrate" required>
                             <option value="">Select substrate...</option>
-                            <option>Steel</option>
-                            <option>Aluminum</option>
-                            <option>Stainless Steel</option>
-                            <option>Cast Iron</option>
-                            <option>Other</option>
+                            <option>Structural / Carbon Steel</option>
+                            <option>Aluminum (Extrusions / Sheet)</option>
+                            <option>Stainless Steel (304 / 316)</option>
+                            <option>Cast Iron / Ductile Iron</option>
+                            <option>Galvanized Steel</option>
+                            <option>Brass / Copper / Yellow Metals</option>
+                            <option>Other / Composite</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-grid">
                     <div class="form-group">
                         <label class="form-label">Estimated Quantity</label>
-                        <input type="number" class="form-control" placeholder="Number of parts" required>
+                        <input type="number" class="form-control" placeholder="Number of parts / batch" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Required Finish</label>
+                        <label class="form-label">Required Finish / Spec</label>
                         <select class="form-control" required>
                             <option value="">Select finish...</option>
-                            <option>Matte</option>
-                            <option>Satin</option>
-                            <option>Gloss</option>
-                            <option>Textured</option>
-                            <option>Metallic</option>
+                            <option>Matte (5% - 20% Gloss)</option>
+                            <option>Satin (30% - 50% Gloss)</option>
+                            <option>High Gloss (80%+ Gloss)</option>
+                            <option>Fine Textured / Wrinkle</option>
+                            <option>Metallic / Sparkle</option>
+                            <option>Custom RAL Color Match</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Project Message / Dimensions</label>
-                    <textarea class="form-control" placeholder="Describe component dimensions, surface condition, and performance needs..." required></textarea>
+                    <label class="form-label">Part Dimensions, Masking Zones & Service Environment</label>
+                    <textarea class="form-control" placeholder="Describe length x width x height, estimated part weight, critical threads/bores to mask, and outdoor/chemical exposure needs..." required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">SUBMIT QUOTE REQUEST</button>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">SUBMIT PRODUCTION RFQ (24-48 HR RESPONSE)</button>
+            </form>
+
+            <!-- FORM 2: TECHNICAL CONSULTATION -->
+            <form id="consult-form" style="display: none;" onsubmit="event.preventDefault(); alert('Consultation Request Received! A Senior Coating Materials Engineer will contact you within 1 business day.'); this.closest('.modal-overlay').classList.remove('active'); document.body.style.overflow = '';">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">Consultation Focus</label>
+                        <select class="form-control" required>
+                            <option value="">Select engineering challenge...</option>
+                            <option>Coating System Selection for New Product</option>
+                            <option>Premature Coating Failure Troubleshooting</option>
+                            <option>Specification Compliance (ASTM, AAMA, MIL-SPEC)</option>
+                            <option>Harsh Environment / Salt Spray / Chemical Defense</option>
+                            <option>Substrate Pre-Treatment & Blast Profiling</option>
+                            <option>Custom Formulation or Test Coupon Sampling</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Preferred Discussion Format</label>
+                        <select class="form-control" required>
+                            <option value="Phone Call">Direct Engineering Phone Call</option>
+                            <option value="Virtual Video Meeting">Virtual Video Conference (Screen Share)</option>
+                            <option value="Email Technical Brief">Email Technical Evaluation Brief</option>
+                            <option value="Facility Visit">Facility & Lab Visit (On-Site)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">Company / Organization</label>
+                        <input type="text" class="form-control" placeholder="Company or project name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Contact Email or Direct Phone</label>
+                        <input type="text" class="form-control" placeholder="Email or direct line" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Technical Challenge / Operating Environment Details</label>
+                    <textarea class="form-control" placeholder="Describe temperatures, chemical exposure, substrate alloy, failure history, or required ASTM specifications..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">SCHEDULE 1-ON-1 TECHNICAL CONSULTATION</button>
             </form>
         </div>
     </div>

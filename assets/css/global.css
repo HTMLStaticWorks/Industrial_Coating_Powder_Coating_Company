@@ -3,12 +3,13 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
+  font-weight: 400;
   transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
   margin-bottom: var(--space-sm);
   color: var(--text-primary);
@@ -24,6 +25,7 @@ p {
   margin-bottom: var(--space-md);
   color: var(--text-secondary);
   font-size: 1rem;
+  font-weight: 400;
 }
 
 .text-lead {

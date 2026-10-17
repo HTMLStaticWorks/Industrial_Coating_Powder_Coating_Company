@@ -144,7 +144,7 @@ TITANCOAT
                         <li>Indoor application suitability</li>
                         <li>Standard curing cycle</li>
                     </ul>
-                    <button class="btn btn-outline" data-modal-target="quote-modal" style="width:100%;">Request Specification</button>
+                    <button class="btn btn-outline" data-modal-target="quote-modal" data-preselect-system="Thermoset Powder Coatings" style="width:100%;">Request Standard Quote &rarr;</button>
                 </div>
 
                 <!-- Performance -->
@@ -161,7 +161,7 @@ TITANCOAT
                         <li>Outdoor UV resistance</li>
                         <li>Extended warranty</li>
                     </ul>
-                    <button class="btn btn-primary" data-modal-target="quote-modal" style="width:100%;">Request Specification</button>
+                    <button class="btn btn-primary" data-modal-target="quote-modal" data-preselect-system="Zinc-Rich Primers & Barriers" style="width:100%;">Request Performance Quote &rarr;</button>
                 </div>
 
                 <!-- Protective -->
@@ -177,7 +177,7 @@ TITANCOAT
                         <li>Marine-grade suitability</li>
                         <li>Independent lab verification</li>
                     </ul>
-                    <button class="btn btn-outline" data-modal-target="quote-modal" style="width:100%;">Request Specification</button>
+                    <button class="btn btn-outline" data-modal-target="quote-modal" data-preselect-system="High-Performance Liquid Coatings" style="width:100%;">Request Protective Quote &rarr;</button>
                 </div>
 
                 <!-- Custom -->
@@ -193,7 +193,7 @@ TITANCOAT
                         <li>Specific texture profiling</li>
                         <li>Dedicated QA planning</li>
                     </ul>
-                    <button class="btn btn-outline" data-modal-target="quote-modal" style="width:100%;">Discuss Application</button>
+                    <button class="btn btn-outline" data-modal-target="quote-modal" data-form-mode="consultation" style="width:100%;">Discuss Application &rarr;</button>
                 </div>
             </div>
         </div>
@@ -246,7 +246,8 @@ TITANCOAT
                     <div class="calc-result-box">
                         <span class="label-small" style="margin-bottom: 0;">Estimated Range</span>
                         <div class="calc-result-value" id="calc-result">$---</div>
-                        <p class="calc-result-note">Demo estimate Ã¢â‚¬â€ final pricing requires comprehensive project review and engineering analysis.</p>
+                        <p class="calc-result-note">Preliminary estimate based on volume parameters. Final pricing is confirmed via engineering review of your 2D/3D part drawings.</p>
+                        <button class="service-card-cta-btn primary" style="margin-top: 1.25rem;" data-modal-target="quote-modal" data-form-mode="quote">Request Formal RFQ for This Estimate &rarr;</button>
                     </div>
                 </div>
             </div>
@@ -255,10 +256,13 @@ TITANCOAT
 
     <!-- SECTION 04: PRICING CTA -->
     <section class="pricing-cta">
-        <div class="container fade-up">
+        <div class="container fade-up text-center">
             <h2>Let's Price the Right Solution.</h2>
-            <p class="text-lead">Submit your technical drawings and specifications for a formal quotation.</p>
-            <button class="btn btn-primary" style="margin-top: 1.5rem;" data-modal-target="quote-modal">Submit Project Details</button>
+            <p class="text-lead" style="max-width: 680px; margin: 0 auto;">Submit your technical drawings and specifications for a formal line-item quotation within 24–48 hours, or consult with a materials specialist.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                <button class="btn btn-primary" data-modal-target="quote-modal" data-form-mode="quote">Request Production RFQ (24-48 Hr) &rarr;</button>
+                <button class="btn btn-outline" style="border-color: var(--accent-orange); color: var(--accent-orange);" data-modal-target="quote-modal" data-form-mode="consultation">Book Technical Consultation &rarr;</button>
+            </div>
         </div>
     </section>
 
@@ -320,61 +324,116 @@ TITANCOAT
         </div>
     </footer>
 
-        <!-- MODAL: QUOTE REQUEST -->
+    <!-- MODAL: QUOTE & CONSULTATION REQUEST -->
     <div class="modal-overlay" id="quote-modal">
         <div class="modal-card">
             <button class="modal-close">&times;</button>
             <div class="modal-header">
-                <h3>Request a Coating Quote</h3>
-                <p>Provide your project details for an engineering evaluation.</p>
+                <h3 id="modal-heading">Request a Coating Quote</h3>
+                <p id="modal-subheading">Provide your project details for an itemized engineering evaluation.</p>
             </div>
-            <form onsubmit="event.preventDefault(); alert('Quote Request Submitted! (Demo)'); this.closest('.modal-overlay').classList.remove('active'); document.body.style.overflow = '';">
+
+            <!-- Tab Switcher between Quote (RFQ) and Technical Consultation -->
+            <div class="modal-tab-nav">
+                <button type="button" class="modal-tab-btn active" id="modal-tab-rfq">Production Quote (RFQ)</button>
+                <button type="button" class="modal-tab-btn" id="modal-tab-consult">Engineering Consultation</button>
+            </div>
+
+            <!-- FORM 1: PRODUCTION QUOTE (RFQ) -->
+            <form id="rfq-form" onsubmit="event.preventDefault(); alert('Quote Request Submitted! Our engineering team will review your specifications and reply within 24–48 hours.'); this.closest('.modal-overlay').classList.remove('active'); document.body.style.overflow = '';">
                 <div class="form-grid">
                     <div class="form-group">
-                        <label class="form-label">Project Type</label>
-                        <select class="form-control" required>
+                        <label class="form-label">Coating System / Process</label>
+                        <select class="form-control" id="quote-project-type" required>
                             <option value="">Select process...</option>
-                            <option>Powder Coating</option>
-                            <option>Sandblasting</option>
-                            <option>Protective Coating</option>
-                            <option>Metal Finishing</option>
-                            <option>Custom Coating</option>
+                            <option value="Thermoset Powder Coatings">Thermoset Powder Coating (AAMA 2604/2605)</option>
+                            <option value="Thermoplastic Coatings">Thermoplastic Coating (Nylon / PE)</option>
+                            <option value="High-Performance Liquid Coatings">High-Performance Liquid / 2K Polyurethane</option>
+                            <option value="Zinc-Rich Primers & Barriers">Zinc-Rich Epoxy Primer (C5-M Marine)</option>
+                            <option value="Specialty & Extreme Environment Coatings">High-Temp Ceramic & Silicone (Up to 1,200°F)</option>
+                            <option value="Textures, Gloss & Custom Finishes">Architectural Textures & Custom RAL</option>
+                            <option value="Sandblasting & Surface Prep">Abrasive Sandblasting Prep Only</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Material</label>
-                        <select class="form-control" required>
+                        <label class="form-label">Substrate Material</label>
+                        <select class="form-control" id="quote-substrate" required>
                             <option value="">Select substrate...</option>
-                            <option>Steel</option>
-                            <option>Aluminum</option>
-                            <option>Stainless Steel</option>
-                            <option>Cast Iron</option>
-                            <option>Other</option>
+                            <option>Structural / Carbon Steel</option>
+                            <option>Aluminum (Extrusions / Sheet)</option>
+                            <option>Stainless Steel (304 / 316)</option>
+                            <option>Cast Iron / Ductile Iron</option>
+                            <option>Galvanized Steel</option>
+                            <option>Brass / Copper / Yellow Metals</option>
+                            <option>Other / Composite</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-grid">
                     <div class="form-group">
                         <label class="form-label">Estimated Quantity</label>
-                        <input type="number" class="form-control" placeholder="Number of parts" required>
+                        <input type="number" class="form-control" placeholder="Number of parts / batch" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Required Finish</label>
+                        <label class="form-label">Required Finish / Spec</label>
                         <select class="form-control" required>
                             <option value="">Select finish...</option>
-                            <option>Matte</option>
-                            <option>Satin</option>
-                            <option>Gloss</option>
-                            <option>Textured</option>
-                            <option>Metallic</option>
+                            <option>Matte (5% - 20% Gloss)</option>
+                            <option>Satin (30% - 50% Gloss)</option>
+                            <option>High Gloss (80%+ Gloss)</option>
+                            <option>Fine Textured / Wrinkle</option>
+                            <option>Metallic / Sparkle</option>
+                            <option>Custom RAL Color Match</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Project Message / Dimensions</label>
-                    <textarea class="form-control" placeholder="Describe component dimensions, surface condition, and performance needs..." required></textarea>
+                    <label class="form-label">Part Dimensions, Masking Zones & Service Environment</label>
+                    <textarea class="form-control" placeholder="Describe length x width x height, estimated part weight, critical threads/bores to mask, and outdoor/chemical exposure needs..." required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">SUBMIT QUOTE REQUEST</button>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">SUBMIT PRODUCTION RFQ (24-48 HR RESPONSE)</button>
+            </form>
+
+            <!-- FORM 2: TECHNICAL CONSULTATION -->
+            <form id="consult-form" style="display: none;" onsubmit="event.preventDefault(); alert('Consultation Request Received! A Senior Coating Materials Engineer will contact you within 1 business day.'); this.closest('.modal-overlay').classList.remove('active'); document.body.style.overflow = '';">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">Consultation Focus</label>
+                        <select class="form-control" required>
+                            <option value="">Select engineering challenge...</option>
+                            <option>Coating System Selection for New Product</option>
+                            <option>Premature Coating Failure Troubleshooting</option>
+                            <option>Specification Compliance (ASTM, AAMA, MIL-SPEC)</option>
+                            <option>Harsh Environment / Salt Spray / Chemical Defense</option>
+                            <option>Substrate Pre-Treatment & Blast Profiling</option>
+                            <option>Custom Formulation or Test Coupon Sampling</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Preferred Discussion Format</label>
+                        <select class="form-control" required>
+                            <option value="Phone Call">Direct Engineering Phone Call</option>
+                            <option value="Virtual Video Meeting">Virtual Video Conference (Screen Share)</option>
+                            <option value="Email Technical Brief">Email Technical Evaluation Brief</option>
+                            <option value="Facility Visit">Facility & Lab Visit (On-Site)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">Company / Organization</label>
+                        <input type="text" class="form-control" placeholder="Company or project name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Contact Email or Direct Phone</label>
+                        <input type="text" class="form-control" placeholder="Email or direct line" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Technical Challenge / Operating Environment Details</label>
+                    <textarea class="form-control" placeholder="Describe temperatures, chemical exposure, substrate alloy, failure history, or required ASTM specifications..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">SCHEDULE 1-ON-1 TECHNICAL CONSULTATION</button>
             </form>
         </div>
     </div>

@@ -2,7 +2,7 @@
 
 /* --- SECTION 01 - SERVICES HERO --- */
 .services-hero {
-    min-height: 70vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     position: relative;
@@ -228,7 +228,7 @@
     cursor: pointer;
     font-family: var(--font-heading);
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-primary);
     transition: background-color var(--transition-fast);
 }
@@ -658,4 +658,20 @@
     background-color: var(--bg-primary);
     text-align: center;
     padding: 6rem 0;
+}
+
+.service-cta .btn-outline {
+    border-color: #1A1A1A;
+    color: #1A1A1A;
+}
+
+[data-theme="dark"] .service-cta .btn-outline {
+    border-color: #FFFFFF !important;
+    color: #FFFFFF !important;
+}
+
+.service-cta .btn-outline:hover,
+[data-theme="dark"] .service-cta .btn-outline:hover {
+    border-color: var(--accent-orange) !important;
+    color: var(--accent-orange) !important;
 }

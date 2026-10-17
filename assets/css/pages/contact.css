@@ -2,12 +2,11 @@
 
 /* --- SECTION 01 - CONTACT HERO --- */
 .contact-hero {
-    min-height: 60vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 8rem;
-    padding-bottom: 4rem;
+    padding-top: 5rem;
     overflow: hidden;
     background-color: var(--industrial-black);
 }
@@ -240,6 +239,8 @@
     border-radius: var(--radius-md);
     text-align: center;
     transition: transform var(--transition-fast);
+    display: flex;
+    flex-direction: column;
 }
 
 .directory-card:hover {
