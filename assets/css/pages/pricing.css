@@ -2,13 +2,20 @@
 
 /* --- SECTION 01 - PRICING HERO --- */
 .pricing-hero {
-    min-height: 80vh;
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 5rem;
+    padding-top: 8.5rem;
+    padding-bottom: 4rem;
     overflow: hidden;
     background-color: var(--industrial-black);
+}
+
+@media (min-width: 992px) {
+    .pricing-hero {
+        padding-top: 9.5rem;
+        padding-bottom: 5rem;
+    }
 }
 
 .pricing-hero-bg {
@@ -31,7 +38,7 @@
 .pricing-hero-content {
     position: relative;
     z-index: 3;
-    max-width: 800px;
+    max-width: 950px;
     margin: 0 auto;
     text-align: center;
 }
@@ -39,6 +46,7 @@
 .pricing-hero-content h1 {
     color: #fff;
     margin-bottom: var(--space-md);
+    font-size: clamp(2.2rem, 4vw, 3.75rem);
 }
 
 .pricing-hero-content p {
