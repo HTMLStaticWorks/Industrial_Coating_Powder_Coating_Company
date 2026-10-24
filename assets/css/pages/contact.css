@@ -279,6 +279,12 @@
 .directory-card p {
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
+    min-height: 4.5rem;
+}
+
+.directory-contact-info {
+    margin-top: auto;
+    margin-bottom: 1.5rem;
 }
 
 .directory-link {
@@ -294,7 +300,38 @@
     text-decoration: underline;
 }
 
-@media (max-width: 900px) { .directory-grid { grid-template-columns: 1fr; } }
+.directory-card .service-card-cta-btn {
+    margin-top: 0;
+}
+
+@media (max-width: 1024px) {
+    .directory-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .directory-card:nth-child(1) {
+        grid-column: 1 / span 2;
+    }
+    .directory-card:nth-child(2) {
+        grid-column: 3 / span 2;
+    }
+    .directory-card:nth-child(3) {
+        grid-column: 2 / span 2;
+    }
+}
+
+@media (max-width: 768px) { 
+    .directory-grid { 
+        grid-template-columns: 1fr; 
+    } 
+    .directory-card:nth-child(1),
+    .directory-card:nth-child(2),
+    .directory-card:nth-child(3) {
+        grid-column: auto;
+    }
+    .directory-card p { 
+        min-height: auto; 
+    }
+}
 
 /* --- SECTION 05 - FAQ --- */
 .faq-section {
